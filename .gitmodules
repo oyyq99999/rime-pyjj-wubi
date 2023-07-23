@@ -1,0 +1,9 @@
+[submodule "pinyin-data"]
+	path = pinyin-data
+	url = https://github.com/mozillazg/pinyin-data.git
+[submodule "rime-wubi86-ext"]
+	path = rime-wubi86-ext
+	url = https://github.com/LS-Hower/rime-wubi86-ext.git
+[submodule "rime-wubi"]
+	path = rime-wubi
+	url = https://github.com/rime/rime-wubi.git
