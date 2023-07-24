@@ -2,6 +2,9 @@
 
 import re
 
+output_dir = 'generated'
+output_fn = 'caspal_pinyin.txt'
+
 def untone(pinyin):
   mappings = {
     'ā': 'a',
@@ -83,9 +86,9 @@ def main():
   keys = list(pinyin_map.keys())
   keys = [int(x[2:], 16) for x in keys]
   keys = sorted(keys)
-  keys = ['U+%X' % x for x in keys]
+  keys = ['U+%04X' % x for x in keys]
 
-  with open('result/caspal_pinyin.txt', 'w') as f:
+  with open('{}/{}'.format(output_dir, output_fn), 'w') as f:
     for key in keys:
       c = bytes.fromhex(('%8s' % key[2:]).replace(' ', '0')).decode('utf-32be')
       pinyin_list = process(pinyin_map[key])
