@@ -52,6 +52,13 @@ def main():
             f.write('{}\t{};{}\n'.format(key, pinyin, fuma))
         else:
           f.write('{}\t{}\n'.format(key, pinyin))
+    with open("{}/{}".format(output_dir, 'caspal_phrase_pinyin.txt')) as fph:
+      lines = fph.readlines()
+    f.write('\n')
+    f.write('# 以下为词组\n')
+    for line in lines:
+      f.write('{}'.format(line))
+
 
 
 if __name__ == '__main__':

@@ -7,3 +7,6 @@
 [submodule "rime-wubi"]
 	path = rime-wubi
 	url = https://github.com/rime/rime-wubi.git
+[submodule "phrase-pinyin-data"]
+	path = phrase-pinyin-data
+	url = https://github.com/mozillazg/phrase-pinyin-data.git
