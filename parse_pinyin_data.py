@@ -70,6 +70,8 @@ def substitute_specials(pinyin_map):
   pinyin_map['U+5638'] = ['fu', 'wu'] # 嘸
   pinyin_map['U+5677'] = ['hen', 'xin'] # 噷
   pinyin_map['U+20BBE'] = ['en'] # 𠮾
+  pinyin_map['U+228F5'] = ['chu'] # 𢣵
+  pinyin_map['U+2574C'] = ['chu'] # 𥝌
 
 def main():
   pinyin_map = {}
