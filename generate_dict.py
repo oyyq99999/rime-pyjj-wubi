@@ -9,7 +9,7 @@ header = '''# author: Caspal
 name: caspal_pyjj_wubi
 version: "2023.07.24"
 sort: by_weight
-use_preset_vocabulary: false
+use_preset_vocabulary: true
 ...
 
 '''

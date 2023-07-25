@@ -47,7 +47,7 @@ def untone(pinyin):
 
 def main():
   pinyin_map = {}
-  with open('phrase-pinyin-data/pinyin.txt') as f:
+  with open('phrase-pinyin-data/large_pinyin.txt') as f:
     lines = f.readlines()
   lines = [line.strip() for line in lines]
   lines = list(filter(lambda x: len(x) > 0 and x[0] != '#', lines))
