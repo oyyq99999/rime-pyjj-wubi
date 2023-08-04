@@ -3,7 +3,7 @@
 
 schema:
   schema_id: caspal_pyjj_wubi
-  name: 拼音加加五笔
+  name: 拼音加加五笔整句
   version: "0.01"
   author:
     - Caspal
@@ -11,6 +11,7 @@ schema:
     拼音加加双拼方案+五笔辅码
   dependencies:
     - caspal_wubi86
+    - caspal_wubi_fuma
 
 switches:
   - name: ascii_mode
@@ -30,6 +31,7 @@ engine:
     - key_binder
     - speller
     - punctuator
+    - lua_processor@*fuma_selector
     - selector
     - navigator
     - express_editor
@@ -42,7 +44,8 @@ engine:
   translators:
     - punct_translator
     - reverse_lookup_translator
-    - script_translator
+    - lua_translator@*fuma_translator
+    # - script_translator
   filters:
     - simplifier
     - uniquifier
@@ -52,44 +55,45 @@ speller:
   delimiter: " '"
   algebra:
     - erase/^xx$/
-    - derive/^([jqxy])u(;.*?$|$)/$1v$2/
+    - derive/^([jqxy])u$/$1v/
     - derive/^([aoe].*)$/o$1/
     - xform/^([ae])(.*)$/$1$1$2/
-    - xform/^([^;]*?)iu(;.*?$|$)/$1N$2/
-    - xform/^([^;]*?)[iu]a(;.*?$|$)/$1B$2/
-    - xform/^([^;]*?)(er|ing)(;.*?$|$)/$1Q$3/
-    - xform/^([^;]*?)[uv]an(;.*?$|$)/$1C$2/
-    - xform/^([^;]*?)([uv]e|uai)(;.*?$|$)/$1X$3/
+    - xform/iu$/$1N/
+    - xform/[iu]a$/B/
+    - xform/(er|ing)$/Q/
+    - xform/[uv]an$/C/
+    - xform/([uv]e|uai)$/X/
     - xform/^sh/I/
     - xform/^ch/U/
     - xform/^zh/V/
-    - xform/^([^;]*?)uo(;.*?$|$)/$1O$2/
-    - xform/^([^;]*?)[uv]n(;.*?$|$)/$1Z$2/
-    - xform/^([^;]*?)i?ong(;.*?$|$)/$1Y$2/
-    - xform/^([^;]*?)[iu]ang(;.*?$|$)/$1H$2/
-    - xform/^([^;]*?)en(;.*?$|$)/$1R$2/
-    - xform/^([^;]*?)eng(;.*?$|$)/$1T$2/
-    - xform/^([^;]*?)ang(;.*?$|$)/$1G$2/
-    - xform/^([^;]*?)ian(;.*?$|$)/$1J$2/
-    - xform/^([^;]*?)an(;.*?$|$)/$1F$2/
-    - xform/^([^;]*?)iao(;.*?$|$)/$1K$2/
-    - xform/^([^;]*?)ao(;.*?$|$)/$1D$2/
-    - xform/^([^;]*?)ai(;.*?$|$)/$1S$2/
-    - xform/^([^;]*?)ei(;.*?$|$)/$1W$2/
-    - xform/^([^;]*?)ie(;.*?$|$)/$1M$2/
-    - xform/^([^;]*?)ui(;.*?$|$)/$1V$2/
-    - xform/^([^;]*?)ou(;.*?$|$)/$1P$2/
-    - xform/^([^;]*?)in(;.*?$|$)/$1L$2/
+    - xform/uo$/O/
+    - xform/[uv]n$/Z/
+    - xform/i?ong$/Y/
+    - xform/[iu]ang$/H/
+    - xform/(.)en$/$1R/
+    - xform/(.)eng$/$1T/
+    - xform/(.)ang$/$1G/
+    - xform/ian$/J/
+    - xform/(.)an$/$1F/
+    - xform/iao$/K/
+    - xform/(.)ao$/$1D/
+    - xform/(.)ai$/$1S/
+    - xform/(.)ei$/$1W/
+    - xform/ie$/M/
+    - xform/ui$/V/
+    - xform/(.)ou$/$1P/
+    - xform/in$/L/
     - xlit/QWRTYUIOPSDFGHMJCKLZXVBN/qwrtyuiopsdfghmjcklzxvbn/
-    - derive/^(\w+);(\w)(\w)$/$1$2$3/
-    - derive/^(\w+);(\w)(\w)$/$1$2/
-    - derive/^(\w+);(\w)(\w)$/$1/
-    - derive/^(\w+);(\w)$/$1$2/
-    - derive/^(\w+);(\w)$/$1/
+    - derive/^;(\w)(\w);$/$1/
+    - xform/^;(\w+);$/$1/
+
+fuma:
+  dictionary: caspal_wubi_fuma
+  prism: caspal_wubi_fuma
 
 translator:
-  dictionary: caspal_pyjj_wubi
-  prism: caspal_pyjj_wubi
+  dictionary: caspal_pinyin_unicode15
+  prism: caspal_pinyin_unicode15
   # preedit_format:
   #   - xform/^(\w\w)(.+)$/$1;$2/
   #   - xform/^([aoe])(\w)/0$2/
