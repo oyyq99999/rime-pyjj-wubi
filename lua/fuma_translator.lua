@@ -86,17 +86,19 @@ function fuma_translator.func(input, seg, env)
                 fuma_candidates[#fuma_candidates + 1] = f.text
             end
         end
-        for r in result:iter() do
-            t = r.text
-            for fi = 1, #fuma_candidates do
-                ft = fuma_candidates[fi]
-                if string.find(t, ft) ~= nil and not contains(texts, t) then
-                    texts[#texts + 1] = t
-                    r.type = 'fuma'
-                    r.comment = ';' .. w
-                    -- r.preedit = string.sub(input, 1, utf8.len(t) * 2) .. ';' .. w
-                    candidates[#candidates + 1] = r
-                    break
+        if result ~= nil then
+            for r in result:iter() do
+                t = r.text
+                for fi = 1, #fuma_candidates do
+                    ft = fuma_candidates[fi]
+                    if string.find(t, ft) ~= nil and not contains(texts, t) then
+                        texts[#texts + 1] = t
+                        r.type = 'fuma'
+                        r.comment = ';' .. w
+                        -- r.preedit = string.sub(input, 1, utf8.len(t) * 2) .. ';' .. w
+                        candidates[#candidates + 1] = r
+                        break
+                    end
                 end
             end
         end
