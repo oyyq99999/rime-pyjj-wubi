@@ -94,44 +94,43 @@ fuma:
 translator:
   dictionary: caspal_pinyin_unicode15
   prism: caspal_pinyin_unicode15
-  # preedit_format:
-  #   - xform/^(\w\w)(.+)$/$1;$2/
-  #   - xform/^([aoe])(\w)/0$2/
-  #   - xform/^([bpmnljqxy])l/$1IN/
-  #   - xform/^(\w)t/$1ENG/
-  #   - xform/^(\w)n/$1IU/
-  #   - xform/^([gkhvuirzcs])b/$1UA/
-  #   - xform/^(\w)b/$1IA/
-  #   - xform/^([dtnlgkhjqxyvuirzcs])c/$1UAN/
-  #   - xform/^([dtgkhvuirzcs])v/$1UI/
-  #   - xform/^(\w)v/$1V/
-  #   - xform/^([gkhvuirzcs])x/$1UAI/
-  #   - xform/^(\w)x/$1VE/
-  #   - xform/^([dtnlgkhvuirzcs])o/$1UO/
-  #   - xform/^(\w)z/$1UN/
-  #   - xform/^([jqx])y/$1IONG/
-  #   - xform/^(\w)y/$1ONG/
-  #   - xform/^([jqxnlb])h/$1IANG/
-  #   - xform/^(\w)h/$1UANG/
-  #   - xform/^(\w)r/$1EN/
-  #   - xform/^(\w)g/$1ANG/
-  #   - xform/^(\w)f/$1AN/
-  #   - xform/^(\w)d/$1AO/
-  #   - xform/^(\w)s/$1AI/
-  #   - xform/^(\w)w/$1EI/
-  #   - xform/^(\w)m/$1IE/
-  #   - xform/^(\w)k/$1IAO/
-  #   - xform/^(\w)p/$1OU/
-  #   - xform/^(\w)j/$1IAN/
-  #   - xform/^(0)q/$1ER/
-  #   - xform/^(\w)q/$1ING/
-  #   - xform/^0(\w)/$1/
-  #   - xlit/QWRTYUIOPSDFGHMJCKLZXVBNAEIOU/qwrtyuiopsdfghmjcklzxvbnaeiou/
-  #   - "xform/(^|[ '])v/$1zh/"
-  #   - "xform/(^|[ ‘])u/$1ch/"
-  #   - "xform/(^|[ ‘])i/$1sh/"
-  #   - xform/^([jqxy])v/$1u/
-  #   - xform/^([nl])v/$1ü/
+  preedit_format:
+    - xform/^([aoe])(\w)/0$2/
+    - xform/([bpmnljqxy])l/$1IN/
+    - xform/(\w)t/$1ENG/
+    - xform/(\w)n/$1IU/
+    - xform/([gkhvuirzcs])b/$1UA/
+    - xform/(\w)b/$1IA/
+    - xform/([dtnlgkhjqxyvuirzcs])c/$1UAN/
+    - xform/([dtgkhvuirzcs])v/$1UI/
+    - xform/(\w)v/$1V/
+    - xform/([gkhvuirzcs])x/$1UAI/
+    - xform/(\w)x/$1VE/
+    - xform/([dtnlgkhvuirzcs])o/$1UO/
+    - xform/(\w)z/$1UN/
+    - xform/([jqx])y/$1IONG/
+    - xform/(\w)y/$1ONG/
+    - xform/([jqxnlb])h/$1IANG/
+    - xform/(\w)h/$1UANG/
+    - xform/(\w)r/$1EN/
+    - xform/(\w)g/$1ANG/
+    - xform/(\w)f/$1AN/
+    - xform/(\w)d/$1AO/
+    - xform/(\w)s/$1AI/
+    - xform/(\w)w/$1EI/
+    - xform/(\w)m/$1IE/
+    - xform/(\w)k/$1IAO/
+    - xform/(\w)p/$1OU/
+    - xform/(\w)j/$1IAN/
+    - xform/(0)q/$1ER/
+    - xform/(\w)q/$1ING/
+    - xform/0(\w)/$1/
+    - xlit/QWRTYUIOPSDFGHMJCKLZXVBNAEIOU/qwrtyuiopsdfghmjcklzxvbnaeiou/
+    - "xform/(^|[ '])v/$1zh/"
+    - "xform/(^|[ ‘])u/$1ch/"
+    - "xform/(^|[ ‘])i/$1sh/"
+    - xform/([jqxy])v/$1u/
+    - xform/([nl])v/$1ü/
 
 reverse_lookup:
   dictionary: caspal_wubi86

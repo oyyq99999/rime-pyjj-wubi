@@ -95,7 +95,7 @@ function fuma_translator.func(input, seg, env)
                         texts[#texts + 1] = t
                         r.type = 'fuma'
                         r.comment = ';' .. w
-                        -- r.preedit = string.sub(input, 1, utf8.len(t) * 2) .. ';' .. w
+                        r.preedit = r.preedit .. ';' .. w .. ' '
                         candidates[#candidates + 1] = r
                         break
                     end
