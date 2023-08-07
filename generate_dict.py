@@ -71,7 +71,7 @@ def wubi():
   with open('{}/{}'.format(output_dir, output_fn_wubi), 'w') as f:
     f.write(header_wubi)
     for key in keys:
-      for wubi in wubi86_map[key]:
+      for wubi in sorted(wubi86_map[key]):
         f.write('{}\t{}\n'.format(key, wubi))
     with open("{}/{}".format(output_dir, 'caspal_phrase_pinyin.txt')) as fph:
       lines = fph.readlines()
@@ -94,7 +94,7 @@ def pinyin():
   with open('{}/{}'.format(output_dir, output_fn_pinyin), 'w') as f:
     f.write(header_pinyin)
     for key in keys:
-      for pinyin in pinyin_map[key]:
+      for pinyin in sorted(pinyin_map[key]):
         f.write('{}\t{}\n'.format(key, pinyin))
     with open("{}/{}".format(output_dir, 'caspal_phrase_pinyin.txt')) as fph:
       lines = fph.readlines()
@@ -127,7 +127,7 @@ def fuma():
   with open('{}/{}'.format(output_dir, output_fn_fuma), 'w') as f:
     f.write(header_fuma)
     for key in keys:
-      for fuma in fuma_map[key]:
+      for fuma in sorted(fuma_map[key]):
         f.write('{}\t{}\n'.format(key, fuma))
 
 def main():
