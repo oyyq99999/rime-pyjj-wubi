@@ -2,7 +2,7 @@
 
 ---
 name: caspal_wubi_fuma
-version: "2023.08.07"
+version: "2023.08.08"
 sort: by_weight
 use_preset_vocabulary: false
 ...

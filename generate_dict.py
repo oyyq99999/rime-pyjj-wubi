@@ -2,41 +2,40 @@
 
 from datetime import datetime
 
+from util import read_file
+
 now = datetime.now()
 version = now.strftime('%Y.%m.%d')
 
 output_dir = 'generated'
-output_fn_pinyin = 'caspal_pinyin_unicode15.dict.yaml'
-output_fn_fuma = 'caspal_wubi_fuma.dict.yaml'
-output_fn_wubi = 'caspal_wubi86.dict.yaml'
+output_fn_format = '{}.dict.yaml'
+pinyin_id = 'caspal_pinyin_unicode15'
+fuma_id = 'caspal_wubi_fuma'
+wubi_id = 'caspal_wubi86'
 
-header_pinyin = '''# author: Caspal
+output_fn_pinyin = output_fn_format.format(pinyin_id)
+output_fn_fuma = output_fn_format.format(fuma_id)
+output_fn_wubi = output_fn_format.format(wubi_id)
 
----
-name: caspal_pinyin_unicode15
-version: "{}"
-sort: by_weight
-use_preset_vocabulary: true
-...
-
-'''.format(version)
-
-header_fuma = '''# author: Caspal
+header_template = '''# author: Caspal
 
 ---
-name: caspal_wubi_fuma
-version: "{}"
+name: {id}
+version: "{v}"
 sort: by_weight
-use_preset_vocabulary: false
+use_preset_vocabulary: {p}
 ...
 
-'''.format(version)
+'''
+
+header_pinyin = header_template.format(id=pinyin_id, v=version, p='true')
+header_fuma = header_template.format(id=fuma_id, v=version, p='false')
 
 header_wubi = '''# author: Caspal
 
 ---
-name: caspal_wubi86
-version: "{}"
+name: {id}
+version: "{v}"
 sort: by_weight
 columns:
   - text
@@ -55,14 +54,11 @@ encoder:
       formula: "AaBaCaZa"
 ...
 
-'''.format(version)
+'''.format(id=wubi_id, v=version)
 
 def wubi():
   wubi86_map = {}
-  with open ('{}/{}'.format(output_dir, 'caspal_wubi86.txt')) as f:
-    lines = f.readlines()
-  lines = [line.strip() for line in lines]
-  lines = list(filter(lambda x: len(x) > 0 and x[0] != '#', lines))
+  lines = read_file('{}/{}'.format(output_dir, 'caspal_wubi86.txt'))
   for line in lines:
     ch, wubi = line.split('\t')
     wubi86_map.setdefault(ch, set()).add(wubi)
@@ -82,10 +78,8 @@ def wubi():
 
 def pinyin():
   pinyin_map = {}
-  with open('{}/{}'.format(output_dir, 'caspal_pinyin.txt')) as f:
-    lines = f.readlines()
-  lines = [line.strip() for line in lines]
-  lines = list(filter(lambda x: len(x) > 0 and x[0] != '#', lines))
+
+  lines = read_file('{}/{}'.format(output_dir, 'caspal_pinyin.txt'))
   for line in lines:
     ch, pinyin = line.split('\t')
     pinyin_map.setdefault(ch, set()).add(pinyin)
@@ -103,14 +97,10 @@ def pinyin():
     for line in lines:
       f.write('{}'.format(line))
 
-
 def fuma():
   fuma_map = {}
 
-  with open('{}/{}'.format(output_dir, 'caspal_wubi86_fuma.txt')) as f:
-    lines = f.readlines()
-  lines = [line.strip() for line in lines]
-  lines = list(filter(lambda x: len(x) > 0 and x[0] != '#', lines))
+  lines = read_file('{}/{}'.format(output_dir, 'caspal_wubi86_fuma.txt'))
   for line in lines:
     ch, fuma = line.split('\t')
     fuma_map.setdefault(ch, set()).add(fuma)

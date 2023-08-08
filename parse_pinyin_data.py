@@ -2,50 +2,10 @@
 
 import re
 
+from util import untone, read_file
+
 output_dir = 'generated'
 output_fn = 'caspal_pinyin.txt'
-
-def untone(pinyin):
-  mappings = {
-    'ā': 'a',
-    'á': 'a',
-    'ǎ': 'a',
-    'à': 'a',
-    'ē': 'e',
-    'é': 'e',
-    'ě': 'e',
-    'è': 'e',
-    'ī': 'i',
-    'í': 'i',
-    'ǐ': 'i',
-    'ì': 'i',
-    'ō': 'o',
-    'ó': 'o',
-    'ǒ': 'o',
-    'ò': 'o',
-    'ū': 'u',
-    'ú': 'u',
-    'ǔ': 'u',
-    'ù': 'u',
-    'ǖ': 'v',
-    'ǘ': 'v',
-    'ǚ': 'v',
-    'ǜ': 'v',
-    'ü': 'v',
-    'm̄': 'm',
-    'ḿ': 'm',
-    'm̀': 'm',
-    'ń': 'n',
-    'ň': 'n',
-    'ǹ': 'n',
-    'ê̄': 'ei',
-    'ế': 'ei',
-    'ê̌': 'ei',
-    'ề': 'ei',
-  }
-  for f, t in mappings.items():
-    pinyin = pinyin.replace(f, t)
-  return pinyin
 
 def process(pinyins):
   result = set()
@@ -76,13 +36,10 @@ def substitute_specials(pinyin_map):
 
 def main():
   pinyin_map = {}
-  with open('pinyin-data/pinyin.txt') as f:
-    lines = f.readlines()
-  lines = [line.strip() for line in lines]
-  lines = list(filter(lambda x: len(x) > 0 and x[0] != '#', lines))
+  lines = read_file('pinyin-data/pinyin.txt')
   for line in lines:
     code, pinyins = [x.strip() for x in line.split(':', 1)]
-    pinyin_map[code] = [x.strip() for x in pinyins[:pinyins.index('#')].strip().split(',')]
+    pinyin_map[code] = [x.strip() for x in pinyins.split(',')]
 
   substitute_specials(pinyin_map)
 

@@ -3,6 +3,8 @@
 import re
 from string import ascii_lowercase as alc
 
+from util import read_file
+
 output_dir = 'generated'
 output_wubi_fn = 'caspal_wubi86.txt'
 output_fuma_fn = 'caspal_wubi86_fuma.txt'
@@ -47,9 +49,7 @@ def main():
     'rime-wubi86-ext/wubi86.exth.dict.yaml',
   ]
   for fn in files:
-    with open(fn) as f:
-      lines = f.readlines()
-    lines = [line.strip() for line in lines]
+    lines = read_file(fn)
     lines = [re.sub(r'^\s*#.*|---|\.\.\.|^.*[-:z].*|^\S\S+\t.*', '', l) for l in lines]
     lines = list(filter(lambda x: len(x) > 0, lines))
     for line in lines:
