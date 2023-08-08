@@ -10,10 +10,16 @@ version = now.strftime('%Y.%m.%d')
 output_dir = 'generated'
 output_fn_format = '{}.dict.yaml'
 pinyin_id = 'caspal_pinyin_unicode15'
+pinyin_simp_id = 'caspal_pinyin_unicode15_simp'
+pinyin_trad_id = 'caspal_pinyin_unicode15_trad'
+pinyin_other_id = 'caspal_pinyin_unicode15_other'
 fuma_id = 'caspal_wubi_fuma'
 wubi_id = 'caspal_wubi86'
 
 output_fn_pinyin = output_fn_format.format(pinyin_id)
+output_fn_pinyin_simp = output_fn_format.format(pinyin_simp_id)
+output_fn_pinyin_trad = output_fn_format.format(pinyin_trad_id)
+output_fn_pinyin_other = output_fn_format.format(pinyin_other_id)
 output_fn_fuma = output_fn_format.format(fuma_id)
 output_fn_wubi = output_fn_format.format(wubi_id)
 
@@ -29,6 +35,9 @@ use_preset_vocabulary: {p}
 '''
 
 header_pinyin = header_template.format(id=pinyin_id, v=version, p='true')
+header_pinyin_simp = header_template.format(id=pinyin_simp_id, v=version, p='false')
+header_pinyin_trad = header_template.format(id=pinyin_trad_id, v=version, p='false')
+header_pinyin_other = header_template.format(id=pinyin_other_id, v=version, p='false')
 header_fuma = header_template.format(id=fuma_id, v=version, p='false')
 
 header_wubi = '''# author: Caspal
@@ -56,6 +65,33 @@ encoder:
 
 '''.format(id=wubi_id, v=version)
 
+def get_variant_tables():
+  simp_set = set()
+  trad_set = set()
+  lines = read_file('OpenCC/data/dictionary/STCharacters.txt')
+  for line in lines:
+    s, t = line.split('\t')
+    s = s.strip()
+    t = t.split(' ')
+    simp_set.add(s)
+    for x in t:
+      trad_set.add(x)
+
+  lines = read_file('OpenCC/data/dictionary/TSCharacters.txt')
+  for line in lines:
+    t, s = line.split('\t')
+    t = t.strip()
+    s = s.split(' ')
+    trad_set.add(t)
+    for x in s:
+      simp_set.add(x)
+  # not included in OpenCC
+  for c in {'𰻝', '𮧵'}:
+    simp_set.add(c)
+  for c in {'𰻞', '韡'}:
+    trad_set.add(c)
+  return (simp_set, trad_set)
+
 def wubi():
   wubi86_map = {}
   lines = read_file('{}/{}'.format(output_dir, 'caspal_wubi86.txt'))
@@ -78,11 +114,25 @@ def wubi():
 
 def pinyin():
   pinyin_map = {}
+  pinyin_simp_map = {}
+  pinyin_trad_map = {}
+  pinyin_other_map = {}
+
+  simp_set, trad_set = get_variant_tables()
 
   lines = read_file('{}/{}'.format(output_dir, 'caspal_pinyin.txt'))
   for line in lines:
     ch, pinyin = line.split('\t')
     pinyin_map.setdefault(ch, set()).add(pinyin)
+    included = False
+    if ch in simp_set:
+      pinyin_simp_map.setdefault(ch, set()).add(pinyin)
+      included = True
+    if ch in trad_set:
+      pinyin_trad_map.setdefault(ch, set()).add(pinyin)
+      included = True
+    if not included:
+      pinyin_other_map.setdefault(ch, set()).add(pinyin)
 
   keys = sorted(pinyin_map.keys())
   with open('{}/{}'.format(output_dir, output_fn_pinyin), 'w') as f:
@@ -96,6 +146,28 @@ def pinyin():
     f.write('# 以下为词组\n')
     for line in lines:
       f.write('{}'.format(line))
+
+  keys = sorted(pinyin_simp_map.keys())
+  with open('{}/{}'.format(output_dir, output_fn_pinyin_simp), 'w') as f:
+    f.write(header_pinyin_simp)
+    for key in keys:
+      for pinyin in sorted(pinyin_simp_map[key]):
+        f.write('{}\t{}\n'.format(key, pinyin))
+
+  keys = sorted(pinyin_trad_map.keys())
+  with open('{}/{}'.format(output_dir, output_fn_pinyin_trad), 'w') as f:
+    f.write(header_pinyin_trad)
+    for key in keys:
+      for pinyin in sorted(pinyin_trad_map[key]):
+        f.write('{}\t{}\n'.format(key, pinyin))
+
+  keys = sorted(pinyin_other_map.keys())
+  with open('{}/{}'.format(output_dir, output_fn_pinyin_other), 'w') as f:
+    f.write(header_pinyin_other)
+    for key in keys:
+      for pinyin in sorted(pinyin_other_map[key]):
+        f.write('{}\t{}\n'.format(key, pinyin))
+
 
 def fuma():
   fuma_map = {}
