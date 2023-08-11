@@ -95,7 +95,7 @@ translator:
   dictionary: caspal_pinyin_unicode15
   prism: caspal_pinyin_unicode15
   preedit_format:
-    - xform/^([aoe])(\w)/0$2/
+    - xform/([aoe])(\w)/0$2/
     - xform/([bpmnljqxy])l/$1IN/
     - xform/(\w)t/$1ENG/
     - xform/(\w)n/$1IU/

@@ -14,7 +14,7 @@ local function select_candidate(ctx, candidate, idx)
             ctx:select(idx)
         end
         ctx:pop_input(fuma_len)
-        if ctx.composition:toSegmentation():get_confirmed_position() == string.len(ctx.input) then
+        if ctx.composition:has_finished_composition() then
             ctx:commit()
         end
         return kAccepted
