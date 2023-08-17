@@ -8,7 +8,7 @@ output_fn = 'caspal_phrase_pinyin.txt'
 def main():
   pinyin_map = {}
 
-  lines = read_file('phrase-pinyin-data/large_pinyin.txt')
+  lines = read_file('libs/phrase-pinyin-data/large_pinyin.txt')
 
   with open('{}/{}'.format(output_dir, output_fn), 'w') as f:
     for line in lines:

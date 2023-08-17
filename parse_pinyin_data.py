@@ -27,7 +27,7 @@ def substitute_specials(pinyin_map):
 
 def main():
   pinyin_map = {}
-  lines = read_file('pinyin-data/pinyin.txt')
+  lines = read_file('libs/pinyin-data/pinyin.txt')
   code_points = get_code_points()
   for line in lines:
     code, pinyins = [x.strip() for x in line.split(':', 1)]

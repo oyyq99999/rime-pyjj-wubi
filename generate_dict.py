@@ -68,7 +68,7 @@ encoder:
 def get_variant_tables():
   simp_set = set()
   trad_set = set()
-  lines = read_file('OpenCC/data/dictionary/STCharacters.txt')
+  lines = read_file('libs/OpenCC/data/dictionary/STCharacters.txt')
   for line in lines:
     s, t = line.split('\t')
     s = s.strip()
@@ -77,7 +77,7 @@ def get_variant_tables():
     for x in t:
       trad_set.add(x)
 
-  lines = read_file('OpenCC/data/dictionary/TSCharacters.txt')
+  lines = read_file('libs/OpenCC/data/dictionary/TSCharacters.txt')
   for line in lines:
     t, s = line.split('\t')
     t = t.strip()

@@ -22,17 +22,17 @@ def substitute_specials(wubi86_map):
 def main():
   wubi86_map = {}
   files = [
-    'rime-wubi/wubi86.dict.yaml',
-    'rime-wubi86-ext/wubi86.basiccmpl.dict.yaml',
-    'rime-wubi86-ext/wubi86.extacmpl.dict.yaml',
-    'rime-wubi86-ext/wubi86.extbcmpl.dict.yaml',
-    'rime-wubi86-ext/wubi86.extc.dict.yaml',
-    'rime-wubi86-ext/wubi86.extccmpl.dict.yaml',
-    'rime-wubi86-ext/wubi86.extd.dict.yaml',
-    'rime-wubi86-ext/wubi86.exte.dict.yaml',
-    'rime-wubi86-ext/wubi86.extf.dict.yaml',
-    'rime-wubi86-ext/wubi86.extg.dict.yaml',
-    'rime-wubi86-ext/wubi86.exth.dict.yaml',
+    'libs/rime-wubi/wubi86.dict.yaml',
+    'libs/rime-wubi86-ext/wubi86.basiccmpl.dict.yaml',
+    'libs/rime-wubi86-ext/wubi86.extacmpl.dict.yaml',
+    'libs/rime-wubi86-ext/wubi86.extbcmpl.dict.yaml',
+    'libs/rime-wubi86-ext/wubi86.extc.dict.yaml',
+    'libs/rime-wubi86-ext/wubi86.extccmpl.dict.yaml',
+    'libs/rime-wubi86-ext/wubi86.extd.dict.yaml',
+    'libs/rime-wubi86-ext/wubi86.exte.dict.yaml',
+    'libs/rime-wubi86-ext/wubi86.extf.dict.yaml',
+    'libs/rime-wubi86-ext/wubi86.extg.dict.yaml',
+    'libs/rime-wubi86-ext/wubi86.exth.dict.yaml',
   ]
   code_points = get_code_points()
   for fn in files:

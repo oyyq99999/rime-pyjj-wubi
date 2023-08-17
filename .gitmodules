@@ -1,15 +1,15 @@
 [submodule "pinyin-data"]
-	path = pinyin-data
+	path = libs/pinyin-data
 	url = https://github.com/mozillazg/pinyin-data.git
 [submodule "rime-wubi86-ext"]
-	path = rime-wubi86-ext
+	path = libs/rime-wubi86-ext
 	url = https://github.com/LS-Hower/rime-wubi86-ext.git
 [submodule "rime-wubi"]
-	path = rime-wubi
+	path = libs/rime-wubi
 	url = https://github.com/rime/rime-wubi.git
 [submodule "phrase-pinyin-data"]
-	path = phrase-pinyin-data
+	path = libs/phrase-pinyin-data
 	url = https://github.com/mozillazg/phrase-pinyin-data.git
 [submodule "OpenCC"]
-	path = OpenCC
+	path = libs/OpenCC
 	url = https://github.com/BYVoid/OpenCC.git

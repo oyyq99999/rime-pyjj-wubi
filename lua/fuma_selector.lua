@@ -6,7 +6,7 @@ local kAccepted = 1
 local kNoop = 2
 
 local function select_candidate(ctx, candidate, idx)
-    if candidate~= nil and string.match(candidate.comment, '^;%w%w?$') ~= nil then
+    if candidate ~= nil and string.match(candidate.comment, '^;%w%w?$') ~= nil then
         local fuma_len = string.len(candidate.comment) - 1
         if idx == nil then
             ctx:confirm_current_selection()
