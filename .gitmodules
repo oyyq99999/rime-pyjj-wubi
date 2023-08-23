@@ -13,3 +13,6 @@
 [submodule "OpenCC"]
 	path = libs/OpenCC
 	url = https://github.com/BYVoid/OpenCC.git
+[submodule "libs/rime-emoji"]
+	path = libs/rime-emoji
+	url = https://github.com/rime/rime-emoji.git
