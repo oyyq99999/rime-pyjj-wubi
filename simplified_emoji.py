@@ -24,6 +24,17 @@ def has_flag(translations):
   return False
 
 def add_flags(mappings):
+  # according to https://github.com/unicode-org/cldr/blob/release-43-1/common/validity/region.xml
+  # may be updated to later releases
+  # reference: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+  exceptions = [
+    'AN', 'BU', 'CS', 'DD', 'FX', 'SU', 'TP', 'YD', 'YU', 'ZR', # deprecated
+    'DY', 'RH', # indeterminately reserved
+    'HV', 'NH', 'VD', # deleted
+    'EZ', 'QO', # macroregion, no flags found
+    'EZ', 'UK', # exceptionally reserved
+    'ZZ' # unknown
+  ]
   lang = Locale('zh-Hans')
   letter_a = ord('a')
   flag_a = '\U0001f1e6'
@@ -32,13 +43,14 @@ def add_flags(mappings):
       if x == 'x' and y != 'k':
         continue
       iso2 = (x + y).upper()
-      if iso2 in ['ZZ']:
+      if iso2 in exceptions:
         continue
       translated = Locale(f'-{iso2}').getDisplayCountry(lang)
       if translated != iso2:
         flag = chr(ord(flag_a) + ord(x) - letter_a) + chr(ord(flag_a) + ord(y) - letter_a)
-        mappings.setdefault(translated, set())
-        mappings[translated].add(flag)
+        mappings.setdefault(translated, [])
+        if flag not in mappings[translated]:
+          mappings[translated].append(flag)
   return mappings
 
 def simplify(fn):
@@ -48,16 +60,23 @@ def simplify(fn):
   for line in lines:
     text, emojis = [x.strip() for x in line.split('\t', 1)]
     emojis = [x.strip() for x in re.split(r'\s+', emojis)]
-    emojis = set(filter(lambda x: len(x) > 0 and x != text, emojis))
+    emojis = list(filter(lambda x: len(x) > 0 and x != text, emojis))
+    filtered = []
+    for x in emojis:
+      if x not in filtered:
+        filtered.append(x)
+    emojis = filtered
     if not need_to_add_flags and has_flag(emojis):
       need_to_add_flags = True
     text = converter.convert(text)
-    results.setdefault(text, set())
-    results[text] |= emojis
+    results.setdefault(text, [])
+    for x in emojis:
+      if x not in results[text]:
+        results[text].append(x)
   if need_to_add_flags:
     add_flags(results)
   for k in results:
-    results[k] = [k] + list(results[k])
+    results[k] = [k] + results[k]
   return results
 
 def main():
