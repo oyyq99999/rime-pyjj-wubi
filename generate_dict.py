@@ -9,10 +9,14 @@ version = now.strftime('%Y.%m.%d')
 
 output_dir = 'generated'
 output_fn_format = '{}.dict.yaml'
+
 pinyin_id = 'caspal_pinyin_unicode15'
-pinyin_simp_id = 'caspal_pinyin_unicode15_simp'
-pinyin_trad_id = 'caspal_pinyin_unicode15_trad'
-pinyin_other_id = 'caspal_pinyin_unicode15_other'
+pinyin_simp_id = f'{pinyin_id}_simp'
+pinyin_trad_id = f'{pinyin_id}_trad'
+pinyin_other_id = f'{pinyin_id}_other'
+
+phrase_id = 'caspal_pinyin_phrase'
+
 fuma_id = 'caspal_wubi_fuma'
 wubi_id = 'caspal_wubi86'
 
@@ -20,6 +24,9 @@ output_fn_pinyin = output_fn_format.format(pinyin_id)
 output_fn_pinyin_simp = output_fn_format.format(pinyin_simp_id)
 output_fn_pinyin_trad = output_fn_format.format(pinyin_trad_id)
 output_fn_pinyin_other = output_fn_format.format(pinyin_other_id)
+
+output_fn_phrase = output_fn_format.format(phrase_id)
+
 output_fn_fuma = output_fn_format.format(fuma_id)
 output_fn_wubi = output_fn_format.format(wubi_id)
 
@@ -34,10 +41,29 @@ use_preset_vocabulary: {p}
 
 '''
 
-header_pinyin = header_template.format(id=pinyin_id, v=version, p='true')
 header_pinyin_simp = header_template.format(id=pinyin_simp_id, v=version, p='false')
 header_pinyin_trad = header_template.format(id=pinyin_trad_id, v=version, p='false')
 header_pinyin_other = header_template.format(id=pinyin_other_id, v=version, p='false')
+
+header_pinyin = '''# author: Caspal
+
+---
+name: {id}
+version: "{v}"
+sort: by_weight
+vocabulary: essay-zh-hans
+import_tables:
+  - {simp_id}
+  - {other_id}
+  # - {trad_id}
+  - {phrase_id}
+...
+
+'''.format(id=pinyin_id, v=version, simp_id=pinyin_simp_id, other_id=pinyin_other_id, trad_id=pinyin_trad_id, phrase_id=phrase_id)
+
+
+header_pinyin_phrase = header_template.format(id=phrase_id, v=version, p='false')
+
 header_fuma = header_template.format(id=fuma_id, v=version, p='false')
 
 header_wubi = '''# author: Caspal
@@ -113,7 +139,6 @@ def wubi():
       f.write('{}\n'.format(line.split('\t')[0]))
 
 def pinyin():
-  pinyin_map = {}
   pinyin_simp_map = {}
   pinyin_trad_map = {}
   pinyin_other_map = {}
@@ -123,7 +148,6 @@ def pinyin():
   lines = read_file('{}/{}'.format(output_dir, 'caspal_pinyin.txt'))
   for line in lines:
     ch, pinyin = line.split('\t')
-    pinyin_map.setdefault(ch, set()).add(pinyin)
     included = False
     if ch in simp_set:
       pinyin_simp_map.setdefault(ch, set()).add(pinyin)
@@ -134,18 +158,8 @@ def pinyin():
     if not included:
       pinyin_other_map.setdefault(ch, set()).add(pinyin)
 
-  keys = sorted(pinyin_map.keys())
   with open('{}/{}'.format(output_dir, output_fn_pinyin), 'w') as f:
     f.write(header_pinyin)
-    for key in keys:
-      for pinyin in sorted(pinyin_map[key]):
-        f.write('{}\t{}\n'.format(key, pinyin))
-    with open("{}/{}".format(output_dir, 'caspal_phrase_pinyin.txt')) as fph:
-      lines = fph.readlines()
-    f.write('\n')
-    f.write('# 以下为词组\n')
-    for line in lines:
-      f.write('{}'.format(line))
 
   keys = sorted(pinyin_simp_map.keys())
   with open('{}/{}'.format(output_dir, output_fn_pinyin_simp), 'w') as f:
@@ -167,6 +181,12 @@ def pinyin():
     for key in keys:
       for pinyin in sorted(pinyin_other_map[key]):
         f.write('{}\t{}\n'.format(key, pinyin))
+
+  with open('{}/{}'.format(output_dir, output_fn_phrase), 'w') as f:
+    f.write(header_pinyin_phrase)
+    lines = read_file('{}/{}'.format(output_dir, 'caspal_phrase_pinyin.txt'))
+    for line in lines:
+      f.write(f'{line}\n')
 
 
 def fuma():

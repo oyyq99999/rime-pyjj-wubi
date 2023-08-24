@@ -20,7 +20,7 @@ switches:
   - name: full_shape
     states: [ 半角, 全角 ]
   - name: simplification
-    states: [ 漢字, 汉字 ]
+    states: [ 简体, 繁體 ]
   - name: ascii_punct
     states: [ 。，, ．， ]
 
@@ -47,8 +47,11 @@ engine:
     - lua_translator@*fuma_translator
     # - script_translator
   filters:
-    - simplifier
+    - simplifier@s2t
     - uniquifier
+
+s2t:
+  opencc_config: s2t.json
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba
@@ -89,11 +92,9 @@ speller:
 
 fuma:
   dictionary: caspal_wubi_fuma
-  prism: caspal_wubi_fuma
 
 translator:
   dictionary: caspal_pinyin_unicode15
-  prism: caspal_pinyin_unicode15
   preedit_format:
     - xform/([aoe])(\w)/0$2/
     - xform/([bpmnljqxy])l/$1IN/
