@@ -2,7 +2,7 @@
 
 import os, re
 import opencc
-from string import ascii_lowercase as alc
+from string import ascii_uppercase as auc
 from icu import Locale
 
 from util import read_file
@@ -36,13 +36,13 @@ def add_flags(mappings):
     'ZZ' # unknown
   ]
   lang = Locale('zh-Hans')
-  letter_a = ord('a')
+  letter_a = ord('A')
   flag_a = '\U0001f1e6'
-  for x in alc:
-    for y in alc:
-      if x == 'x' and y != 'k':
+  for x in auc:
+    for y in auc:
+      if x == 'X' and y != 'K':
         continue
-      iso2 = (x + y).upper()
+      iso2 = x + y
       if iso2 in exceptions:
         continue
       translated = Locale(f'-{iso2}').getDisplayCountry(lang)
