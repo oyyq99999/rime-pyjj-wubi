@@ -8,22 +8,15 @@ output_dir = 'generated'
 output_fn = 'caspal_pinyin.txt'
 
 def substitute_specials(pinyin_map):
-  pinyin_map['U+3576'] = {'fu'} # 㕶
-  pinyin_map['U+5452'] = {'fu', 'wu'} # 呒
-  pinyin_map['U+5514'] = {'wu', 'en'} # 唔
-  pinyin_map['U+5463'] = {'mou'} # 呣
-  pinyin_map['U+54B9'] = {'e', 'an'} # 咹
-  pinyin_map['U+54CF'] = {'gen', 'hen'} # 哏
-  pinyin_map['U+54FC'] = {'heng'} # 哼
-  pinyin_map['U+54FD'] = {'geng', 'ying'} # 哽
-  pinyin_map['U+5535'] = {'an'} # 唵
-  pinyin_map['U+55EF'] = {'en'} # 嗯
-  pinyin_map['U+5638'] = {'fu', 'wu'} # 嘸
-  pinyin_map['U+5677'] = {'hen', 'xin'} # 噷
-  pinyin_map['U+20BBE'] = {'en'} # 𠮾
-  pinyin_map['U+228F5'] = {'chu'} # 𢣵
-  pinyin_map['U+2574C'] = {'ji'} # 𥝌
-  pinyin_map['U+2E9F5'] = {'wei'} # 𮧵
+  replace_map = {}
+  lines = read_file('data/overwrite_pinyin.txt')
+  for line in lines:
+    ch, pinyin = [x.strip() for x in line.split('\t', 1)]
+    pinyin = pinyin.split()[0]
+    key = 'U+%04X' % ord(ch)
+    replace_map.setdefault(key, set()).add(pinyin)
+  for key in replace_map:
+    pinyin_map[key] = replace_map[key]
 
 def main():
   pinyin_map = {}
