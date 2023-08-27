@@ -203,27 +203,27 @@ use_preset_vocabulary: false
 䵴	ying
 䶕	ba
 䶲	nan
-万	mo
-万	wan
+万	mo	0.02%
+万	wan	99.98%
 丑	chou
 丟	diu
 並	bing
 丰	feng
-乾	gan
-乾	qian
+乾	gan	1.58%
+乾	qian	98.42%
 亂	luan
-了	le
-了	liao
+了	le	98.90%
+了	liao	1.10%
 于	yu
 云	yun
 亘	gen
 亙	gen
 亞	ya
 仆	pu
-仇	chou
-仇	qiu
-价	jia
-价	jie
+仇	chou	83.84%
+仇	qiu	16.16%
+价	jia	99.98%
+价	jie	0.02%
 仿	fang
 伕	fu
 伙	huo
@@ -231,8 +231,8 @@ use_preset_vocabulary: false
 佈	bu
 佔	zhan
 余	yu
-佛	fo
-佛	fu
+佛	fo	97.74%
+佛	fu	2.26%
 佣	yong
 併	bing
 來	lai
@@ -249,8 +249,8 @@ use_preset_vocabulary: false
 俬	si
 修	xiu
 倀	chang
-倆	lia
-倆	liang
+倆	lia	90.53%
+倆	liang	9.46%
 倈	lai
 倉	cang
 個	ge
@@ -273,27 +273,27 @@ use_preset_vocabulary: false
 傢	jia
 傭	yong
 傯	zong
-傳	chuan
-傳	zhuan
+傳	chuan	97.93%
+傳	zhuan	2.07%
 傴	yu
 債	zhai
 傷	shang
 傾	qing
-僂	lou
-僂	lv
+僂	lou	63.64%
+僂	lv	36.36%
 僅	jin
 僉	qian
 僑	qiao
 僕	pu
 僞	wei
 僤	dan
-僥	jiao
-僥	yao
+僥	jiao	100%
+僥	yao	0%
 僨	fen
 僱	gu
 僵	jiang
-價	jia
-價	jie
+價	jia	99.98%
+價	jie	0.02%
 儀	yi
 儁	jun
 儂	nong
@@ -318,8 +318,8 @@ use_preset_vocabulary: false
 兇	xiong
 克	ke
 兌	dui
-兒	er
-兒	ni
+兒	er	100%
+兒	ni	0%
 兗	yan
 党	dang
 內	nei
@@ -338,8 +338,8 @@ use_preset_vocabulary: false
 凱	kai
 凶	xiong
 出	chu
-划	hua
-划	huai
+划	hua	100%
+划	huai	0%
 別	bie
 刪	shan
 刮	gua
@@ -357,8 +357,8 @@ use_preset_vocabulary: false
 創	chuang
 剷	chan
 剾	kou
-劃	hua
-劃	huai
+劃	hua	100%
+劃	huai	0%
 劇	ju
 劉	liu
 劊	gui
@@ -367,8 +367,8 @@ use_preset_vocabulary: false
 劏	tang
 劑	ji
 劚	zhu
-勁	jin
-勁	jing
+勁	jin	78.80%
+勁	jing	21.20%
 勑	chi
 動	dong
 務	wu
@@ -386,20 +386,20 @@ use_preset_vocabulary: false
 匭	gui
 匯	hui
 匱	gui
-區	ou
-區	qu
+區	ou	0.09%
+區	qu	99.91%
 千	qian
 升	sheng
 協	xie
-卜	bo
-卜	bu
+卜	bo	0%
+卜	bu	100%
 占	zhan
 卷	juan
 卹	xu
 卻	que
 卽	ji
-厂	an
-厂	chang
+厂	an	0.05%
+厂	chang	99.95%
 厘	li
 厙	she
 厠	ce
@@ -415,13 +415,13 @@ use_preset_vocabulary: false
 叢	cong
 只	zhi
 台	tai
-叶	xie
-叶	ye
-吁	xu
-吁	yu
+叶	xie	0%
+叶	ye	100%
+吁	xu	95.45%
+吁	yu	4.55%
 吃	chi
-合	ge
-合	he
+合	ge	0.02%
+合	he	99.98%
 吊	diao
 同	tong
 后	hou

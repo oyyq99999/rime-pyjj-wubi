@@ -5,7 +5,7 @@ import opencc
 from string import ascii_uppercase as auc
 from icu import Locale
 
-from util import read_file
+from util import read_file, remove_duplicates
 
 input_dir = 'libs/rime-emoji/opencc'
 output_dir = 'opencc'
@@ -60,12 +60,7 @@ def simplify(fn):
   for line in lines:
     text, emojis = [x.strip() for x in line.split('\t', 1)]
     emojis = [x.strip() for x in re.split(r'\s+', emojis)]
-    emojis = list(filter(lambda x: len(x) > 0 and x != text, emojis))
-    filtered = []
-    for x in emojis:
-      if x not in filtered:
-        filtered.append(x)
-    emojis = filtered
+    emojis = remove_duplicates(list(filter(lambda x: len(x) > 0 and x != text, emojis)))
     if not need_to_add_flags and has_flag(emojis):
       need_to_add_flags = True
     text = converter.convert(text)
