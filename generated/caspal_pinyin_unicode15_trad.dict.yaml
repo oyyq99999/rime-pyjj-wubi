@@ -2,7 +2,7 @@
 
 ---
 name: caspal_pinyin_unicode15_trad
-version: "2023.08.08"
+version: "2023.08.28"
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -407,9 +407,10 @@ use_preset_vocabulary: false
 厭	yan
 厲	li
 厴	yan
-參	can
-參	cen
-參	shen
+參	can	90.45%
+參	cen	0.01%
+參	san	0.01%
+參	shen	8.49%
 叄	can
 叢	cong
 只	zhi
@@ -454,9 +455,9 @@ use_preset_vocabulary: false
 喪	sang
 喫	chi
 喬	qiao
-單	chan
-單	dan
-單	shan
+單	chan	0.10%
+單	dan	99.52%
+單	shan	0.38%
 喲	yo
 嗆	qiang
 嗇	se
@@ -963,9 +964,10 @@ use_preset_vocabulary: false
 摳	kou
 摶	tuan
 摺	zhe
-摻	can
-摻	chan
-摻	shan
+摻	can	0.01%
+摻	chan	99.97%
+摻	shan	0.01%
+摻	xian	0.01%
 撈	lao
 撊	xian
 撏	xian
@@ -1079,9 +1081,9 @@ use_preset_vocabulary: false
 朧	long
 朮	shu
 朱	zhu
-朴	piao
-朴	po
-朴	pu
+朴	piao	40%
+朴	po	0.84%
+朴	pu	59.16%
 杆	gan
 杠	gang
 杯	bei
@@ -4050,9 +4052,9 @@ use_preset_vocabulary: false
 鼉	tuo
 鼕	dong
 鼴	yan
-齊	ji
-齊	qi
-齊	zhai
+齊	ji	0%
+齊	qi	100%
+齊	zhai	0%
 齋	zhai
 齎	ji
 齏	ji
@@ -4089,9 +4091,9 @@ use_preset_vocabulary: false
 龓	long
 龔	gong
 龕	kan
-龜	gui
-龜	jun
-龜	qiu
+龜	gui	99.25%
+龜	jun	0.75%
+龜	qiu	0%
 𠏢	luo
 𠐊	shu
 𠞆	wu

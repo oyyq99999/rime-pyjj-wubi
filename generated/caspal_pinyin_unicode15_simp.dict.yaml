@@ -2,7 +2,7 @@
 
 ---
 name: caspal_pinyin_unicode15_simp
-version: "2023.08.08"
+version: "2023.08.28"
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -145,9 +145,9 @@ use_preset_vocabulary: false
 为	wei
 丽	li
 举	ju
-么	ma
-么	me
-么	yao
+么	me	98%
+么	mo	0.5%
+么	yao	1.5%
 义	yi
 乌	wu
 乐	le
@@ -219,9 +219,8 @@ use_preset_vocabulary: false
 侥	jiao
 侥	yao
 侦	zhen
-侧	ce
-侧	ze
-侧	zhai
+侧	ce	99.69%
+侧	zhai	0.31%
 侨	qiao
 侩	kuai
 侪	chai
@@ -347,9 +346,9 @@ use_preset_vocabulary: false
 升	sheng
 华	hua
 协	xie
-单	chan
-单	dan
-单	shan
+单	chan	0.10%
+单	dan	99.52%
+单	shan	0.38%
 卖	mai
 卜	bo
 卜	bu
@@ -383,9 +382,10 @@ use_preset_vocabulary: false
 厮	si
 县	xian
 叁	san
-参	can
-参	cen
-参	shen
+参	can	90.45%
+参	cen	0.01%
+参	san	0.01%
+参	shen	8.49%
 叆	ai
 叇	dai
 双	shuang
@@ -841,9 +841,9 @@ use_preset_vocabulary: false
 挥	hui
 挦	xian
 挨	ai
-挲	sa
-挲	sha
-挲	suo
+挲	sa	12.50%
+挲	sha	12.50%
+挲	suo	87.50%
 挽	wan
 捆	kun
 捝	tuo
@@ -859,9 +859,10 @@ use_preset_vocabulary: false
 掷	zhi
 掸	dan
 掸	shan
-掺	can
-掺	chan
-掺	shan
+掺	can	0.01%
+掺	chan	99.97%
+掺	shan	0.01%
+掺	xian	0.01%
 掼	guan
 揽	lan
 揾	wen
@@ -934,9 +935,9 @@ use_preset_vocabulary: false
 术	shu
 术	zhu
 朱	zhu
-朴	piao
-朴	po
-朴	pu
+朴	piao	40%
+朴	po	0.84%
+朴	pu	59.16%
 机	ji
 杀	sha
 杂	za
@@ -1621,9 +1622,10 @@ use_preset_vocabulary: false
 缨	ying
 缩	su
 缩	suo
-缪	miao
-缪	miu
-缪	mou
+缪	miao	32.77%
+缪	miu	66%
+缪	mou	0.84%
+缪	mu	0.39%
 缫	sao
 缬	xie
 缭	liao
@@ -1997,9 +1999,9 @@ use_preset_vocabulary: false
 诱	you
 诲	hui
 诳	kuang
-说	shui
-说	shuo
-说	yue
+说	shui	0.13%
+说	shuo	99.87%
+说	yue	0%
 诵	song
 诶	ei
 请	qing
@@ -2180,9 +2182,9 @@ use_preset_vocabulary: false
 輼	wen
 车	che
 车	ju
-轧	ga
-轧	ya
-轧	zha
+轧	ga	22.31%
+轧	ya	27.90%
+轧	zha	49.79%
 轨	gui
 轩	xuan
 轪	dai
@@ -3106,9 +3108,9 @@ use_preset_vocabulary: false
 龙	long
 龚	gong
 龛	kan
-龟	gui
-龟	jun
-龟	qiu
+龟	gui	99.25%
+龟	jun	0.75%
+龟	qiu	0%
 鿎	da
 鿎	ta
 鿏	mai

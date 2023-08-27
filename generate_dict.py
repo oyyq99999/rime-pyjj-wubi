@@ -91,6 +91,17 @@ encoder:
 
 '''.format(id=wubi_id, v=version)
 
+def add_frequency(pinyin_map):
+  frequency_map = {}
+  lines = read_file('data/overwrite_pinyin.txt')
+  for line in lines:
+    ch, pinyin = [x.strip() for x in line.split('\t', 1)]
+    if '\t' in pinyin:
+      frequency_map.setdefault(ch, set()).add(pinyin)
+  for ch in frequency_map:
+    if ch in pinyin_map:
+      pinyin_map[ch] = frequency_map[ch]
+
 def get_variant_tables():
   simp_set = set()
   trad_set = set()
@@ -157,6 +168,10 @@ def pinyin():
       included = True
     if not included:
       pinyin_other_map.setdefault(ch, set()).add(pinyin)
+
+  add_frequency(pinyin_simp_map)
+  add_frequency(pinyin_trad_map)
+  add_frequency(pinyin_other_map)
 
   with open('{}/{}'.format(output_dir, output_fn_pinyin), 'w') as f:
     f.write(header_pinyin)
