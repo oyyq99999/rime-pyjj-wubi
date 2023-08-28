@@ -2,7 +2,7 @@
 
 ---
 name: caspal_pinyin_unicode15_simp
-version: "2023.08.28"
+version: "2023.08.29"
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -414,17 +414,17 @@ use_preset_vocabulary: false
 听	ting
 启	qi
 吴	wu
-呆	ai
-呆	dai
-呐	na
-呐	ne
+呆	ai	0.02%
+呆	dai	99.98%
+呐	na	99.82%
+呐	ne	0.18%
 呒	fu
 呒	wu
 呓	yi
 呕	ou
 呖	li
-呗	bai
-呗	bei
+呗	bai	3.71%
+呗	bei	96.29%
 员	yuan
 员	yun
 呙	guo
@@ -438,8 +438,8 @@ use_preset_vocabulary: false
 咤	zha
 咨	zi
 咸	xian
-咽	yan
-咽	ye
+咽	yan	88.56%
+咽	ye	11.44%
 哄	hong
 响	xiang
 哑	ya
@@ -533,8 +533,8 @@ use_preset_vocabulary: false
 墙	qiang
 壮	zhuang
 声	sheng
-壳	ke
-壳	qiao
+壳	ke	97.56%
+壳	qiao	2.44%
 壶	hu
 壸	kun
 处	chu
@@ -604,8 +604,8 @@ use_preset_vocabulary: false
 寻	xun
 导	dao
 寿	shou
-将	jiang
-将	qiang
+将	jiang	100%
+将	qiang	0%
 尔	er
 尘	chen
 尝	chang
@@ -618,8 +618,8 @@ use_preset_vocabulary: false
 屃	xi
 屉	ti
 届	jie
-属	shu
-属	zhu
+属	shu	99.93%
+属	zhu	0.07%
 屡	lv
 屦	ju
 屿	yu
@@ -701,10 +701,10 @@ use_preset_vocabulary: false
 弦	xian
 弪	jing
 弯	wan
-弹	dan
-弹	tan
-强	jiang
-强	qiang
+弹	dan	22.28%
+弹	tan	77.72%
+强	jiang	0.01%
+强	qiang	99.99%
 归	gui
 当	dang
 录	lu
@@ -712,15 +712,15 @@ use_preset_vocabulary: false
 彦	yan
 彨	chi
 彩	cai
-彷	fang
-彷	pang
+彷	fang	37.93%
+彷	pang	62.07%
 彻	che
 征	zheng
 径	jing
 徕	lai
 御	yu
-徵	zheng
-徵	zhi
+徵	zheng	99%
+徵	zhi	1%
 忆	yi
 忏	chan
 志	zhi
@@ -742,8 +742,8 @@ use_preset_vocabulary: false
 恒	heng
 恤	xu
 恳	ken
-恶	e
-恶	wu
+恶	e	99.99%
+恶	wu	0.01%
 恸	tong
 恹	yan
 恺	kai
@@ -775,8 +775,8 @@ use_preset_vocabulary: false
 懑	men
 懒	lan
 懔	lin
-戆	gang
-戆	zhuang
+戆	gang	100%
+戆	zhuang	0%
 戋	jian
 戏	hu
 戏	xi
@@ -788,8 +788,8 @@ use_preset_vocabulary: false
 戯	xi
 户	hu
 才	cai
-扎	za
-扎	zha
+扎	za	6.72%
+扎	zha	93.28%
 扑	pu
 托	tuo
 扣	kou
@@ -799,8 +799,8 @@ use_preset_vocabulary: false
 扫	sao
 扬	yang
 扰	rao
-折	she
-折	zhe
+折	she	0.86%
+折	zhe	99.14%
 抚	fu
 抛	pao
 抟	tuan
@@ -819,8 +819,8 @@ use_preset_vocabulary: false
 拦	lan
 拧	ning
 拨	bo
-择	ze
-择	zhai
+择	ze	98.75%
+择	zhai	1.25%
 挂	gua
 挚	zhi
 挛	luan
@@ -885,8 +885,8 @@ use_preset_vocabulary: false
 撺	cuan
 擜	e
 擞	sou
-攒	cuan
-攒	zan
+攒	cuan	10%
+攒	zan	90%
 敌	di
 教	jiao
 敚	duo
@@ -900,8 +900,8 @@ use_preset_vocabulary: false
 斗	dou
 斩	zhan
 断	duan
-於	wu
-於	yu
+於	wu	0%
+於	yu	100%
 旋	xuan
 旗	qi
 无	mo
@@ -929,8 +929,8 @@ use_preset_vocabulary: false
 暧	ai
 暧	nuan
 曲	qu
-术	shu
-术	zhu
+术	shu	99%
+术	zhu	1%
 朱	zhu
 朴	piao	40%
 朴	po	0.84%
@@ -961,11 +961,11 @@ use_preset_vocabulary: false
 枪	qiang
 枫	feng
 枭	xiao
-柜	gui
-柜	ju
+柜	gui	99.30%
+柜	ju	0.70%
 柠	ning
-查	cha
-查	zha
+查	cha	99.82%
+查	zha	0.18%
 柽	cheng
 栀	zhi
 栅	shan
@@ -980,12 +980,12 @@ use_preset_vocabulary: false
 栎	yue
 栏	lan
 树	shu
-栖	qi
-栖	xi
+栖	qi	64.80%
+栖	xi	35.20%
 栗	li
 样	yang
-核	he
-核	hu
+核	he	99.92%
+核	hu	0.08%
 栾	luan
 桠	ya
 桡	rao
@@ -1027,8 +1027,8 @@ use_preset_vocabulary: false
 榉	ju
 榝	sha
 槚	jia
-槛	jian
-槛	kan
+槛	jian	27.27%
+槛	kan	72.73%
 槟	bin
 槟	bing
 槠	zhu
@@ -1068,15 +1068,15 @@ use_preset_vocabulary: false
 汇	hui
 汉	han
 污	wu
-汤	shang
-汤	tang
+汤	shang	0.06%
+汤	tang	99.94%
 汹	xiong
 沄	yun
-沈	chen
-沈	shen
+沈	chen	0.01%
+沈	shen	99.99%
 沟	gou
-没	mei
-没	mo
+没	mei	99.89%
+没	mo	0.11%
 沣	feng
 沤	ou
 沥	li
@@ -1092,8 +1092,8 @@ use_preset_vocabulary: false
 注	zhu
 泪	lei
 泶	xue
-泷	long
-泷	shuang
+泷	long	87.27%
+泷	shuang	12.73%
 泸	lu
 泺	luo
 泺	po
@@ -1106,8 +1106,8 @@ use_preset_vocabulary: false
 洒	xi
 洼	wa
 浃	jia
-浅	jian
-浅	qian
+浅	jian	0.24%
+浅	qian	99.76%
 浆	jiang
 浇	jiao
 浈	zhen
@@ -1134,8 +1134,8 @@ use_preset_vocabulary: false
 涞	lai
 涟	lian
 涠	wei
-涡	guo
-涡	wo
+涡	guo	5.26%
+涡	wo	94.74%
 涢	yun
 涣	huan
 涤	di
@@ -1288,8 +1288,8 @@ use_preset_vocabulary: false
 畴	chou
 疖	jie
 疗	liao
-疟	nve
-疟	yao
+疟	nve	92.31%
+疟	yao	7.69%
 疠	li
 疡	yang
 疬	li
@@ -1325,8 +1325,8 @@ use_preset_vocabulary: false
 盏	zhan
 盐	yan
 监	jian
-盖	gai
-盖	ge
+盖	gai	99.91%
+盖	ge	0.09%
 盗	dao
 盘	pan
 眍	kou
@@ -1370,8 +1370,8 @@ use_preset_vocabulary: false
 碱	jian
 礼	li
 祃	ma
-祇	qi
-祇	zhi
+祇	qi	100%
+祇	zhi	0%
 祎	yi
 祢	mi
 祢	ni
@@ -1380,8 +1380,8 @@ use_preset_vocabulary: false
 祸	huo
 禀	bing
 禄	lu
-禅	chan
-禅	shan
+禅	chan	99.24%
+禅	shan	0.76%
 离	li
 私	si
 秃	tu
@@ -1389,11 +1389,11 @@ use_preset_vocabulary: false
 秋	qiu
 种	chong
 种	zhong
-秘	bi
-秘	mi
+秘	bi	0.16%
+秘	mi	99.84%
 积	ji
-称	chen
-称	cheng
+称	chen	2.48%
+称	cheng	97.52%
 秽	hui
 秾	nong
 稆	lv
@@ -1460,8 +1460,8 @@ use_preset_vocabulary: false
 糊	hu
 糍	ci
 糖	tang
-系	ji
-系	xi
+系	ji	0.30%
+系	xi	99.70%
 紧	jin
 累	lei
 絷	zhi
@@ -1473,12 +1473,12 @@ use_preset_vocabulary: false
 红	gong
 红	hong
 纣	zhou
-纤	qian
-纤	xian
+纤	qian	53.05%
+纤	xian	46.95%
 纥	ge
 纥	he
-约	yao
-约	yue
+约	yao	0.02%
+约	yue	99.98%
 级	ji
 纨	wan
 纩	kuang
@@ -1530,12 +1530,12 @@ use_preset_vocabulary: false
 绖	die
 绗	hang
 绘	hui
-给	gei
-给	ji
+给	gei	99.99%
+给	ji	0.01%
 绚	xuan
 绛	jiang
-络	lao
-络	luo
+络	lao	0.97%
+络	luo	99.03%
 绝	jue
 绞	jiao
 统	tong
@@ -1555,8 +1555,8 @@ use_preset_vocabulary: false
 续	xu
 绮	qi
 绯	fei
-绰	chao
-绰	chuo
+绰	chao	4%
+绰	chuo	96%
 绱	shang
 绲	gun
 绳	sheng
@@ -1568,8 +1568,8 @@ use_preset_vocabulary: false
 绹	tao
 绺	liu
 绻	quan
-综	zeng
-综	zong
+综	zeng	1%
+综	zong	99%
 绽	zhan
 绾	wan
 绿	lu
@@ -1583,8 +1583,8 @@ use_preset_vocabulary: false
 缆	lan
 缇	ti
 缈	miao
-缉	ji
-缉	qi
+缉	ji	97.83%
+缉	qi	2.17%
 缊	yun
 缋	hui
 缌	si
@@ -1679,21 +1679,21 @@ use_preset_vocabulary: false
 胪	lu
 胫	jing
 胶	jiao
-脉	mai
-脉	mo
+脉	mai	95.29%
+脉	mo	4.71%
 脍	kuai
 脏	zang
 脐	qi
 脑	nao
 脓	nong
 脔	luan
-脚	jiao
-脚	jue
+脚	jiao	99.91%
+脚	jue	0.09%
 脱	tuo
 脶	luo
 脸	lian
-腊	la
-腊	xi
+腊	la	100%
+腊	xi	0%
 腌	a
 腌	yan
 腘	guo
@@ -1749,8 +1749,8 @@ use_preset_vocabulary: false
 荝	ce
 荞	qiao
 荟	hui
-荠	ji
-荠	qi
+荠	ji	35%
+荠	qi	65%
 荡	dang
 荣	rong
 荤	hun
@@ -1813,8 +1813,8 @@ use_preset_vocabulary: false
 蕴	yun
 薮	sou
 薹	tai
-藉	ji
-藉	jie
+藉	ji	39.42%
+藉	jie	60.58%
 藓	xian
 藴	yun
 蘖	bo
@@ -1883,8 +1883,8 @@ use_preset_vocabulary: false
 褴	lan
 襕	lan
 覆	fu
-见	jian
-见	xian
+见	jian	99.05%
+见	xian	0.95%
 观	guan
 觃	yan
 规	gui
@@ -1892,8 +1892,8 @@ use_preset_vocabulary: false
 视	shi
 觇	chan
 览	lan
-觉	jiao
-觉	jue
+觉	jiao	21.83%
+觉	jue	78.17%
 觊	ji
 觋	xi
 觌	di
@@ -1948,8 +1948,8 @@ use_preset_vocabulary: false
 诃	he
 评	ping
 诅	zu
-识	shi
-识	zhi
+识	shi	99.94%
+识	zhi	0.06%
 诇	xiong
 诈	zha
 诉	su
@@ -2005,18 +2005,18 @@ use_preset_vocabulary: false
 诸	zhu
 诹	zou
 诺	nuo
-读	dou
-读	du
+读	dou	0.01%
+读	du	99.99%
 诼	zhuo
 诽	fei
 课	ke
 诿	wei
 谀	yu
-谁	shei
-谁	shui
+谁	shei	77.69%
+谁	shui	22.31%
 谂	shen
-调	diao
-调	tiao
+调	diao	30.33%
+调	tiao	69.67%
 谄	chan
 谅	liang
 谆	zhun
@@ -2069,8 +2069,8 @@ use_preset_vocabulary: false
 谴	qian
 谵	zhan
 谶	chen
-谷	gu
-谷	yu
+谷	gu	99.93%
+谷	yu	0.07%
 豮	fen
 贝	bei
 贞	zhen
@@ -2093,8 +2093,8 @@ use_preset_vocabulary: false
 贯	guan
 贰	er
 贱	jian
-贲	ben
-贲	bi
+贲	ben	94.83%
+贲	bi	5.17%
 贳	shi
 贴	tie
 贵	gui
@@ -2106,8 +2106,8 @@ use_preset_vocabulary: false
 贻	yi
 贼	zei
 贽	zhi
-贾	gu
-贾	jia
+贾	gu	0.27%
+贾	jia	99.73%
 贿	hui
 赀	zi
 赁	lin
@@ -2135,8 +2135,8 @@ use_preset_vocabulary: false
 赗	feng
 赘	zhui
 赙	fu
-赚	zhuan
-赚	zuan
+赚	zhuan	94.68%
+赚	zuan	5.32%
 赛	sai
 赜	ze
 赝	yan
@@ -2236,8 +2236,8 @@ use_preset_vocabulary: false
 辙	zhe
 辚	lin
 辞	ci
-辟	bi
-辟	pi
+辟	bi	5%
+辟	pi	95%
 辩	bian
 辫	bian
 边	bian
@@ -2249,8 +2249,8 @@ use_preset_vocabulary: false
 运	yun
 还	hai
 还	huan
-这	zhe
-这	zhei
+这	zhe	98.59%
+这	zhei	1.41%
 进	jin
 远	yuan
 违	wei
@@ -2335,8 +2335,8 @@ use_preset_vocabulary: false
 钢	gang
 钣	ban
 钤	qian
-钥	yao
-钥	yue
+钥	yao	91.40%
+钥	yue	8.60%
 钦	qin
 钧	jun
 钨	wu
@@ -2347,8 +2347,8 @@ use_preset_vocabulary: false
 钭	dou
 钭	tou
 钮	niu
-钯	ba
-钯	pa
+钯	ba	90.38%
+钯	pa	9.62%
 钰	yu
 钱	qian
 钲	zheng
@@ -2364,8 +2364,8 @@ use_preset_vocabulary: false
 钼	mu
 钽	tan
 钾	jia
-钿	dian
-钿	tian
+钿	dian	31.03%
+钿	tian	68.97%
 铀	you
 铁	tie
 铂	bo
@@ -2395,8 +2395,8 @@ use_preset_vocabulary: false
 铘	ye
 铙	nao
 铚	zhi
-铛	cheng
-铛	dang
+铛	cheng	1.90%
+铛	dang	98.10%
 铜	tong
 铝	lv
 铞	diao
@@ -2404,8 +2404,8 @@ use_preset_vocabulary: false
 铠	kai
 铡	zha
 铢	zhu
-铣	xi
-铣	xian
+铣	xi	77.92%
+铣	xian	22.08%
 铤	ding
 铤	ting
 铥	diu
@@ -2518,8 +2518,8 @@ use_preset_vocabulary: false
 镍	nie
 镎	na
 镏	liu
-镐	gao
-镐	hao
+镐	gao	69.31%
+镐	hao	30.69%
 镑	bang
 镒	yi
 镓	jia
@@ -2561,8 +2561,8 @@ use_preset_vocabulary: false
 镴	la
 镵	chan
 镶	xiang
-长	chang
-长	zhang
+长	chang	60.26%
+长	zhang	39.74%
 门	men
 闩	shuan
 闪	shan
@@ -2626,8 +2626,8 @@ use_preset_vocabulary: false
 阵	zhen
 阶	jie
 际	ji
-陆	liu
-陆	lu
+陆	liu	6.25%
+陆	lu	93.75%
 陇	long
 陈	chen
 陉	xing
@@ -2639,8 +2639,8 @@ use_preset_vocabulary: false
 随	sui
 隐	yin
 隶	li
-隽	juan
-隽	jun
+隽	juan	33.73%
+隽	jun	66.27%
 难	nan
 雇	gu
 雏	chu
@@ -2652,8 +2652,8 @@ use_preset_vocabulary: false
 霉	mei
 霡	mai
 霭	ai
-靓	jing
-靓	liang
+靓	jing	0.85%
+靓	liang	99.15%
 靔	tian
 静	jing
 面	mian
@@ -2799,8 +2799,8 @@ use_preset_vocabulary: false
 馕	nang
 马	ma
 驭	yu
-驮	duo
-驮	tuo
+驮	duo	3.27%
+驮	tuo	96.73%
 驯	xun
 驰	chi
 驱	qu
@@ -3084,8 +3084,8 @@ use_preset_vocabulary: false
 鼌	chao
 鼍	tuo
 鼹	yan
-齐	ji
-齐	qi
+齐	ji	0%
+齐	qi	100%
 齑	ji
 齿	chi
 龀	chen
@@ -3096,8 +3096,8 @@ use_preset_vocabulary: false
 龅	bao
 龆	tiao
 龇	zi
-龈	ken
-龈	yin
+龈	ken	11.11%
+龈	yin	88.89%
 龉	yu
 龊	chuo
 龋	qu
