@@ -2,7 +2,7 @@
 
 ---
 name: caspal_pinyin_unicode15_simp
-version: "2023.08.29"
+version: "2023.08.30"
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -204,8 +204,8 @@ use_preset_vocabulary: false
 伤	shang
 伥	chang
 伦	lun
-伧	cang
-伧	chen
+伧	cang	100%
+伧	chen	0%
 伪	wei
 伫	zhu
 体	ti
@@ -425,8 +425,8 @@ use_preset_vocabulary: false
 呖	li
 呗	bai	3.71%
 呗	bei	96.29%
-员	yuan
-员	yun
+员	yuan	100%
+员	yun	0%
 呙	guo
 呛	qiang
 呜	wu
@@ -500,8 +500,9 @@ use_preset_vocabulary: false
 圹	kuang
 场	chang
 坂	ban
-坏	huai
-坏	pi
+坏	huai	100%
+坏	pei	0%
+坏	pi	0%
 块	kuai
 坚	jian
 坛	tan
@@ -545,8 +546,8 @@ use_preset_vocabulary: false
 夫	fu
 头	tou
 夸	kua
-夹	ga
-夹	jia
+夹	ga	0%
+夹	jia	100%
 夺	duo
 奁	lian
 奂	huan
@@ -594,13 +595,12 @@ use_preset_vocabulary: false
 审	shen
 宪	xian
 宫	gong
-家	jia
-家	jie
+家	jia	100%
+家	jie	0%
 宽	kuan
 宾	bin
 寝	qin
 对	dui
-寻	xin
 寻	xun
 导	dao
 寿	shou
@@ -677,8 +677,8 @@ use_preset_vocabulary: false
 干	gan
 并	bing
 幸	xing
-广	an
-广	guang
+广	an	0%
+广	guang	100%
 庄	zhuang
 庆	qing
 床	chuang
@@ -778,8 +778,8 @@ use_preset_vocabulary: false
 戆	gang	100%
 戆	zhuang	0%
 戋	jian
-戏	hu
-戏	xi
+戏	hu	0%
+戏	xi	100%
 戗	qiang
 战	zhan
 戚	qi
@@ -893,8 +893,8 @@ use_preset_vocabulary: false
 敛	lian
 敩	xiao
 敩	xue
-数	shu
-数	shuo
+数	shu	99.50%
+数	shuo	0.50%
 斋	zhai
 斓	lan
 斗	dou
@@ -1126,8 +1126,8 @@ use_preset_vocabulary: false
 浔	xun
 浕	jin
 涂	tu
-涌	chong
-涌	yong
+涌	chong	0%
+涌	yong	100%
 涚	shui
 涛	tao
 涝	lao
@@ -1159,8 +1159,8 @@ use_preset_vocabulary: false
 湾	wan
 湿	shi
 溁	ying
-溃	hui
-溃	kui
+溃	hui	0%
+溃	kui	100%
 溅	jian
 溆	xu
 溇	lou
@@ -1387,8 +1387,8 @@ use_preset_vocabulary: false
 秃	tu
 秆	gan
 秋	qiu
-种	chong
-种	zhong
+种	chong	1%
+种	zhong	99%
 秘	bi	0.16%
 秘	mi	99.84%
 积	ji
@@ -1470,8 +1470,8 @@ use_preset_vocabulary: false
 纟	si
 纠	jiu
 纡	yu
-红	gong
-红	hong
+红	gong	0.02%
+红	hong	99.98%
 纣	zhou
 纤	qian	53.05%
 纤	xian	46.95%
@@ -1572,8 +1572,8 @@ use_preset_vocabulary: false
 综	zong	99%
 绽	zhan
 绾	wan
-绿	lu
-绿	lv
+绿	lu	0.74%
+绿	lv	99.26%
 缀	zhui
 缁	zi
 缂	ke
@@ -1617,8 +1617,8 @@ use_preset_vocabulary: false
 缦	man
 缧	lei
 缨	ying
-缩	su
-缩	suo
+缩	su	0.62%
+缩	suo	99.38%
 缪	miao	32.77%
 缪	miu	66%
 缪	mou	0.84%
@@ -1633,8 +1633,8 @@ use_preset_vocabulary: false
 缲	qiao
 缲	sao
 缳	huan
-缴	jiao
-缴	zhuo
+缴	jiao	99.48%
+缴	zhuo	0.52%
 缵	zuan
 罂	ying
 网	wang
@@ -1694,8 +1694,8 @@ use_preset_vocabulary: false
 脸	lian
 腊	la	100%
 腊	xi	0%
-腌	a
-腌	yan
+腌	a	1%
+腌	yan	99%
 腘	guo
 腭	e
 腻	ni
@@ -1827,8 +1827,8 @@ use_preset_vocabulary: false
 虮	ji
 虱	shi
 虽	sui
-虾	ha
-虾	xia
+虾	ha	4.30%
+虾	xia	95.70%
 虿	chai
 蚀	shi
 蚁	yi
@@ -1848,8 +1848,8 @@ use_preset_vocabulary: false
 蛴	qi
 蜕	tui
 蜗	wo
-蜡	la
-蜡	zha
+蜡	la	99%
+蜡	zha	1%
 蝇	ying
 蝈	guo
 蝉	chan
@@ -1933,8 +1933,8 @@ use_preset_vocabulary: false
 讵	ju
 讶	ya
 讷	ne
-许	hu
-许	xu
+许	hu	0.71%
+许	xu	99.29%
 讹	e
 论	lun
 讻	xiong
@@ -1967,8 +1967,8 @@ use_preset_vocabulary: false
 试	shi
 诖	gua
 诗	shi
-诘	ji
-诘	jie
+诘	ji	7.55%
+诘	jie	92.45%
 诙	hui
 诚	cheng
 诛	zhu
@@ -2247,8 +2247,8 @@ use_preset_vocabulary: false
 过	guo
 迈	mai
 运	yun
-还	hai
-还	huan
+还	hai	98.01%
+还	huan	1.99%
 这	zhe	98.59%
 这	zhei	1.41%
 进	jin
@@ -2259,16 +2259,16 @@ use_preset_vocabulary: false
 迩	er
 迳	jing
 迹	ji
-适	kuo
-适	shi
+适	kuo	0%
+适	shi	100%
 选	xuan
 逊	xun
 递	di
 逦	li
 逻	luo
 逾	yu
-遗	wei
-遗	yi
+遗	wei	1.56%
+遗	yi	98.44%
 遥	yao
 邓	deng
 邝	kuang
@@ -2371,8 +2371,8 @@ use_preset_vocabulary: false
 铂	bo
 铃	ling
 铄	shuo
-铅	qian
-铅	yan
+铅	qian	99.33%
+铅	yan	0.67%
 铆	mao
 铇	bao
 铈	shi
@@ -2616,8 +2616,8 @@ use_preset_vocabulary: false
 阘	da
 阘	ta
 阙	que
-阚	han
-阚	kan
+阚	han	2.27%
+阚	kan	97.73%
 阛	huan
 队	dui
 阪	ban
@@ -2680,8 +2680,8 @@ use_preset_vocabulary: false
 顼	xu
 顽	wan
 顾	gu
-顿	du
-顿	dun
+顿	du	1.36%
+顿	dun	98.64%
 颀	qi
 颁	ban
 颂	song
@@ -2690,14 +2690,14 @@ use_preset_vocabulary: false
 颅	lu
 领	ling
 颇	po
-颈	geng
-颈	jing
-颉	jie
-颉	xie
+颈	geng	2.66%
+颈	jing	97.34%
+颉	jie	95.52%
+颉	xie	4.48%
 颊	jia
 颋	ting
-颌	ge
-颌	he
+颌	ge	8.99%
+颌	he	91.01%
 颍	ying
 颎	jiong
 颏	ke
@@ -2721,8 +2721,8 @@ use_preset_vocabulary: false
 颡	sang
 颢	hao
 颣	lei
-颤	chan
-颤	zhan
+颤	chan	90.89%
+颤	zhan	9.11%
 颥	ru
 颦	pin
 颧	quan
@@ -2851,8 +2851,8 @@ use_preset_vocabulary: false
 骝	liu
 骞	qian
 骟	shan
-骠	biao
-骠	piao
+骠	biao	84.44%
+骠	piao	15.56%
 骡	luo
 骢	cong
 骣	chan
@@ -2976,8 +2976,8 @@ use_preset_vocabulary: false
 鳢	li
 鳣	zhan
 鳤	guan
-鸟	diao
-鸟	niao
+鸟	diao	0.14%
+鸟	niao	99.86%
 鸠	jiu
 鸡	ji
 鸢	yuan
@@ -3070,8 +3070,8 @@ use_preset_vocabulary: false
 麸	fu
 麹	qu
 麺	mian
-麽	me
-麽	mo
+麽	me	93%
+麽	mo	7%
 黄	huang
 黉	hong
 黡	yan

@@ -2,7 +2,7 @@
 
 ---
 name: caspal_pinyin_unicode15_other
-version: "2023.08.29"
+version: "2023.08.30"
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -6721,8 +6721,8 @@ use_preset_vocabulary: false
 吩	fen
 吪	e
 含	han
-吭	hang
-吭	keng
+吭	hang	27.07%
+吭	keng	72.93%
 吮	shun
 吰	hong
 吱	zhi	70.91%
@@ -6778,8 +6778,8 @@ use_preset_vocabulary: false
 呮	qi
 呯	ping
 呰	zi
-呱	gu
-呱	gua
+呱	gu	1%
+呱	gua	99%
 呲	ci
 呲	zi
 味	wei
@@ -6856,8 +6856,8 @@ use_preset_vocabulary: false
 咱	za	1%
 咱	zan	99%
 咲	xiao
-咳	hai
-咳	ke
+咳	hai	1%
+咳	ke	99%
 咴	hui
 咵	kua
 咶	huai
@@ -7057,8 +7057,8 @@ use_preset_vocabulary: false
 喒	za
 喒	zan
 喓	yao
-喔	o
-喔	wo
+喔	o	35.47%
+喔	wo	64.53%
 喕	mian
 喖	hu
 喗	yun
@@ -7187,8 +7187,8 @@ use_preset_vocabulary: false
 嘧	mi
 嘨	xiao
 嘫	ran
-嘬	chuai
-嘬	zuo
+嘬	chuai	1.47%
+嘬	zuo	98.53%
 嘭	peng
 嘲	chao	99.30%
 嘲	zhao	0.70%
@@ -7239,8 +7239,8 @@ use_preset_vocabulary: false
 噭	jiao
 噮	yuan
 噰	yong
-噱	jue
-噱	xue
+噱	jue	20%
+噱	xue	80%
 噳	yu
 噵	dao
 噶	ga
@@ -7658,8 +7658,8 @@ use_preset_vocabulary: false
 塛	li
 塜	zhong
 塝	bang
-塞	sai
-塞	se
+塞	sai	88.67%
+塞	se	11.33%
 塟	zang
 塠	dui
 塡	tian
@@ -7818,8 +7818,8 @@ use_preset_vocabulary: false
 夬	guai
 夭	yao
 央	yang
-夯	ben
-夯	hang
+夯	ben	2.88%
+夯	hang	97.12%
 夰	gao
 失	shi
 夲	tao
@@ -7845,8 +7845,9 @@ use_preset_vocabulary: false
 奍	quan
 奎	kui
 奏	zou
-契	qi
-契	xie
+契	qi	99.4%
+契	qie	0.30%
+契	xie	0.30%
 奒	kai
 奓	zha
 奔	ben
@@ -8523,8 +8524,8 @@ use_preset_vocabulary: false
 屫	jue
 屭	xi
 屮	che
-屯	tun
-屯	zhun
+屯	tun	99.71%
+屯	zhun	0.29%
 屰	ni
 山	shan
 屲	wa
@@ -9059,8 +9060,8 @@ use_preset_vocabulary: false
 廾	gong
 廿	nian
 弁	bian
-弄	long
-弄	nong
+弄	long	3.66%
+弄	nong	96.34%
 弅	fen
 弆	ju
 弇	yan
@@ -9169,8 +9170,8 @@ use_preset_vocabulary: false
 従	cong
 徔	zhi
 徖	cong
-得	de
-得	dei
+得	de	97%
+得	dei	3%
 徘	pai
 徙	xi
 徚	dong
@@ -9321,8 +9322,8 @@ use_preset_vocabulary: false
 怽	mo
 怾	zhi
 恀	shi
-恁	nen
-恁	nin
+恁	nen	100%
+恁	nin	0%
 恂	xun
 恃	shi
 恄	xi
@@ -9837,8 +9838,8 @@ use_preset_vocabulary: false
 拂	fu
 拃	zha
 拄	zhu
-拆	ca
-拆	chai
+拆	ca	0%
+拆	chai	100%
 拇	mu
 拈	nian
 拉	la
@@ -9849,17 +9850,17 @@ use_preset_vocabulary: false
 拏	na
 拑	qian
 拒	ju
-拓	ta
-拓	tuo
+拓	ta	1.19%
+拓	tuo	98.81%
 拔	ba
 拕	tuo
 拖	tuo
-拗	ao
-拗	niu
+拗	ao	60.12%
+拗	niu	39.88%
 拘	ju
 拙	zhuo
-拚	pan
-拚	pin
+拚	pan	11.86%
+拚	pin	88.14%
 招	zhao
 拜	bai
 拝	bai
@@ -9948,8 +9949,8 @@ use_preset_vocabulary: false
 捈	tu
 捉	zhuo
 捊	pou
-捋	luo
-捋	lv
+捋	luo	6.67%
+捋	lv	93.33%
 捌	ba
 捍	han
 捎	shao
@@ -10057,8 +10058,8 @@ use_preset_vocabulary: false
 揍	zou
 揎	xuan
 描	miao
-提	di
-提	ti
+提	di	0.05%
+提	ti	99.95%
 揑	nie
 插	cha
 揓	shi
@@ -10234,8 +10235,8 @@ use_preset_vocabulary: false
 撪	ben
 撬	qiao
 播	bo
-撮	cuo
-撮	zuo
+撮	cuo	99.90%
+撮	zuo	0.10%
 撯	zhuo
 撰	zhuan
 撱	wei
@@ -10261,8 +10262,8 @@ use_preset_vocabulary: false
 擕	xie
 擖	ka
 擗	pi
-擘	bai
-擘	bo
+擘	bai	99.9%
+擘	bo	0.10%
 擙	ao
 擛	ye
 擝	meng
@@ -11707,8 +11708,8 @@ use_preset_vocabulary: false
 殳	shu
 段	duan
 殶	zhu
-殷	yan
-殷	yin
+殷	yan	0%
+殷	yin	100%
 殸	qing
 殹	yi
 殽	xiao
@@ -13308,8 +13309,8 @@ use_preset_vocabulary: false
 玄	xuan
 玅	miao
 玆	zi
-率	lv
-率	shuai
+率	lv	94.01%
+率	shuai	5.99%
 玈	lu
 玉	yu
 玊	su
@@ -13717,8 +13718,8 @@ use_preset_vocabulary: false
 畧	lve
 畨	pan
 畩	yi
-番	fan
-番	pan
+番	fan	89.71%
+番	pan	10.29%
 畬	she
 畬	yu
 畭	yu
@@ -14431,8 +14432,8 @@ use_preset_vocabulary: false
 磂	liu
 磃	si
 磄	tang
-磅	bang
-磅	pang
+磅	bang	99%
+磅	pang	1%
 磆	hua
 磇	pi
 磈	wei
@@ -15244,8 +15245,8 @@ use_preset_vocabulary: false
 粡	tong
 粢	zi
 粣	ce
-粥	yu
-粥	zhou
+粥	yu	0%
+粥	zhou	100%
 粦	lin
 粧	zhuang
 粨	bai
@@ -15456,8 +15457,8 @@ use_preset_vocabulary: false
 縼	xuan
 縿	shan
 繀	sui
-繁	fan
-繁	po
+繁	fan	99.86%
+繁	po	0.14%
 繄	yi
 繇	yao	51.72%
 繇	you	24.14%
@@ -15639,8 +15640,8 @@ use_preset_vocabulary: false
 翜	sha
 翝	hong
 翞	jiang
-翟	di
-翟	zhai
+翟	di	2.92%
+翟	zhai	97.08%
 翠	cui
 翡	fei
 翢	dao
@@ -16186,8 +16187,8 @@ use_preset_vocabulary: false
 艭	shuang
 艮	gen
 良	liang
-色	se
-色	shai
+色	se	99.9%
+色	shai	0.1%
 艴	bo
 艴	fu
 艵	ping
@@ -17047,8 +17048,8 @@ use_preset_vocabulary: false
 虷	gan
 虷	han
 虸	zi
-虹	hong
-虹	jiang
+虹	hong	99.81%
+虹	jiang	0.19%
 虺	hui
 虻	meng
 虼	ge
@@ -17707,8 +17708,8 @@ use_preset_vocabulary: false
 覀	xi
 要	yao
 覂	feng
-覃	qin
-覃	tan
+覃	qin	80%
+覃	tan	20%
 覄	fu
 覅	fiao
 覇	ba
@@ -17747,8 +17748,8 @@ use_preset_vocabulary: false
 覸	jian
 覻	qu
 覾	shen
-角	jiao
-角	jue
+角	jiao	80.82%
+角	jue	19.18%
 觓	qiu
 觔	jin
 觕	cu
@@ -17997,8 +17998,8 @@ use_preset_vocabulary: false
 谾	hong
 谿	xi
 豀	xi
-豁	hua
-豁	huo
+豁	hua	0%
+豁	huo	100%
 豂	liao
 豃	han
 豄	du
@@ -18064,8 +18065,8 @@ use_preset_vocabulary: false
 貆	huan
 貇	kun
 貈	he
-貉	hao
-貉	he
+貉	hao	46.15%
+貉	he	53.85%
 貊	mo
 貋	an
 貌	mao
@@ -18711,8 +18712,8 @@ use_preset_vocabulary: false
 邧	yuan
 邨	cun
 邩	huo
-邪	xie
-邪	ye
+邪	xie	99.28%
+邪	ye	0.72%
 邫	bang
 邭	ju
 邯	han
@@ -18864,8 +18865,8 @@ use_preset_vocabulary: false
 酟	tian
 酠	qia
 酡	tuo
-酢	cu
-酢	zuo
+酢	cu	22.22%
+酢	zuo	77.78%
 酣	han
 酤	gu
 酥	su

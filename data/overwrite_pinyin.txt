@@ -76,6 +76,65 @@
 鹄	hu
 剡	shan
 剡	yan
+咖	ga
+咖	ka
+寻	xun
+尋	xun
+峤	jiao
+峤	qiao
+挝	wo
+挝	zhua
+掴	guai
+掴	guo
+掸	dan
+掸	shan
+栎	li
+栎	yue
+槟	bin
+槟	bing
+欸	ai
+欸	ei
+沓	da
+沓	ta
+泺	luo
+泺	po
+浒	hu
+浒	xu
+渑	mian
+渑	sheng
+焘	dao
+焘	tao
+煖	nuan
+煖	xuan
+疋	pi
+疋	ya
+糁	san
+糁	shen
+纶	guan
+纶	lun
+荥	xing
+荥	ying
+荨	qian
+荨	xun
+跞	li
+跞	luo
+辗	nian
+辗	zhan
+酾	shai
+酾	shi
+釃	shai
+釃	shi
+钭	dou
+钭	tou
+铊	ta
+铊	tuo
+镦	dui
+镦	dun
+陂	bei
+陂	pi
+陂	po
+鹘	gu
+鹘	hu
 咯	ge	2.04%
 咯	ka	0%
 咯	lo	94.72%
@@ -901,3 +960,157 @@
 鳥	niao	99.86%
 龈	ken	11.11%
 龈	yin	88.89%
+伧	cang	100%
+伧	chen	0%
+吭	hang	27.07%
+吭	keng	72.93%
+员	yuan	100%
+员	yun	0%
+呱	gu	1%
+呱	gua	99%
+咳	hai	1%
+咳	ke	99%
+喔	o	35.47%
+喔	wo	64.53%
+嘬	chuai	1.47%
+嘬	zuo	98.53%
+噱	jue	20%
+噱	xue	80%
+坏	huai	100%
+坏	pei	0%
+坏	pi	0%
+塞	sai	88.67%
+塞	se	11.33%
+夯	ben	2.88%
+夯	hang	97.12%
+夹	ga	0%
+夹	jia	100%
+契	qi	99.4%
+契	qie	0.30%
+契	xie	0.30%
+家	jia	100%
+家	jie	0%
+屯	tun	99.71%
+屯	zhun	0.29%
+广	an	0%
+广	guang	100%
+廁	ce	100%
+廁	si	0%
+弄	long	3.66%
+弄	nong	96.34%
+得	de	97%
+得	dei	3%
+恁	nen	100%
+恁	nin	0%
+戏	hu	0%
+戏	xi	100%
+戲	hu	0%
+戲	xi	100%
+拆	ca	0%
+拆	chai	100%
+拓	ta	1.19%
+拓	tuo	98.81%
+拗	ao	60.12%
+拗	niu	39.88%
+拚	pan	11.86%
+拚	pin	88.14%
+捋	luo	6.67%
+捋	lv	93.33%
+提	di	0.05%
+提	ti	99.95%
+撮	cuo	99.90%
+撮	zuo	0.10%
+擘	bai	99.9%
+擘	bo	0.10%
+数	shu	99.50%
+数	shuo	0.50%
+數	shu	99.50%
+數	shuo	0.50%
+會	hui	99.98%
+會	kuai	0.02%
+樂	le	95%
+樂	yue	5%
+殷	yan	0%
+殷	yin	100%
+涌	chong	0%
+涌	yong	100%
+溃	hui	0%
+溃	kui	100%
+率	lv	94.01%
+率	shuai	5.99%
+番	fan	89.71%
+番	pan	10.29%
+磅	bang	99%
+磅	pang	1%
+种	chong	1%
+种	zhong	99%
+粥	yu	0%
+粥	zhou	100%
+繁	fan	99.86%
+繁	po	0.14%
+红	gong	0.02%
+红	hong	99.98%
+绿	lu	0.74%
+绿	lv	99.26%
+缩	su	0.62%
+缩	suo	99.38%
+缴	jiao	99.48%
+缴	zhuo	0.52%
+翟	di	2.92%
+翟	zhai	97.08%
+腌	a	1%
+腌	yan	99%
+色	se	99.9%
+色	shai	0.1%
+蓋	gai	99.91%
+蓋	ge	0.09%
+虹	hong	99.81%
+虹	jiang	0.19%
+虾	ha	4.30%
+虾	xia	95.70%
+蜡	la	99%
+蜡	zha	1%
+覃	qin	80%
+覃	tan	20%
+角	jiao	80.82%
+角	jue	19.18%
+许	hu	0.71%
+许	xu	99.29%
+诘	ji	7.55%
+诘	jie	92.45%
+豁	hua	0%
+豁	huo	100%
+貉	hao	46.15%
+貉	he	53.85%
+还	hai	98.01%
+还	huan	1.99%
+适	kuo	0%
+适	shi	100%
+遗	wei	1.56%
+遗	yi	98.44%
+還	hai	98.01%
+還	huan	1.99%
+邪	xie	99.28%
+邪	ye	0.72%
+酢	cu	22.22%
+酢	zuo	77.78%
+铅	qian	99.33%
+铅	yan	0.67%
+阚	han	2.27%
+阚	kan	97.73%
+顿	du	1.36%
+顿	dun	98.64%
+颈	geng	2.66%
+颈	jing	97.34%
+颉	jie	95.52%
+颉	xie	4.48%
+颌	ge	8.99%
+颌	he	91.01%
+颤	chan	90.89%
+颤	zhan	9.11%
+骠	biao	84.44%
+骠	piao	15.56%
+鸟	diao	0.14%
+鸟	niao	99.86%
+麽	me	93%
+麽	mo	7%
