@@ -1,10 +1,6 @@
-vpath %.txt data
-vpath %.txt generated
-vpath %.txt opencc
-vpath %.txt libs/OpenCC/data
+vpath %.txt data:generated:opencc:libs/OpenCC/data/dictionary
+vpath wubi86%.dict.yaml libs/rime-wubi:libs/rime-wubi86-ext
 vpath %.dict.yaml generated
-vpath wubi86%.dict.yaml libs/rime-wubi
-vpath wubi86%.dict.yaml libs/rime-wubi86-ext
 
 PYTHON := $(shell command -v python3 2>/dev/null)
 ifndef PYTHON
@@ -15,6 +11,7 @@ pinyin_txts := caspal_pinyin.txt caspal_phrase_pinyin.txt overwrite_pinyin.txt e
 pinyin_dicts := caspal_pinyin_phrase.dict.yaml caspal_pinyin_unicode15.dict.yaml \
 	caspal_pinyin_unicode15_simp.dict.yaml caspal_pinyin_unicode15_trad.dict.yaml \
 	caspal_pinyin_unicode15_other.dict.yaml
+opencc_txts := STCharacters.txt TSCharacters.txt
 
 wubi_sources := wubi86.dict.yaml wubi86.basiccmpl.dict.yaml \
 	wubi86.extacmpl.dict.yaml wubi86.extbcmpl.dict.yaml \
@@ -35,7 +32,7 @@ emoji_sources := libs/rime-emoji/opencc/emoji_category.txt libs/rime-emoji/openc
 
 all : $(dicts) $(emojis)
 
-$(dicts) &: $(pinyin_txts) $(wubi_txts) generate_dict.py
+$(dicts) &: $(pinyin_txts) $(wubi_txts) $(opencc_txts) generate_dict.py
 	$(PYTHON) generate_dict.py
 
 caspal_pinyin.txt : libs/pinyin-data/pinyin.txt overwrite_pinyin.txt parse_pinyin_data.py
