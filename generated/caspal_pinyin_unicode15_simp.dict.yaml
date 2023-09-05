@@ -2,7 +2,7 @@
 
 ---
 name: caspal_pinyin_unicode15_simp
-version: "2023.08.30"
+version: "2023.09.05"
 sort: by_weight
 use_preset_vocabulary: false
 ...
@@ -904,8 +904,8 @@ use_preset_vocabulary: false
 於	yu	100%
 旋	xuan
 旗	qi
-无	mo
-无	wu
+无	mo	0%
+无	wu	100%
 既	ji
 旧	jiu
 时	shi
