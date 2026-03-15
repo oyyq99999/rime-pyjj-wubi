@@ -94,6 +94,7 @@ fuma:
   dictionary: caspal_wubi_fuma
 
 translator:
+  enable_completion: false
   db_class: tabledb
   enable_user_dict: true
   user_dict: caspal_pinyin_user_dict
