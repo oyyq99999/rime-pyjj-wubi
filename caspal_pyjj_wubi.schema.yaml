@@ -94,6 +94,9 @@ fuma:
   dictionary: caspal_wubi_fuma
 
 translator:
+  db_class: tabledb
+  enable_user_dict: true
+  user_dict: caspal_pinyin_user_dict
   dictionary: caspal_pinyin_unicode15
   preedit_format:
     - xform/([aoe])(\w)/0$2/
