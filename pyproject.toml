@@ -1,0 +1,9 @@
+[project]
+name = "rime-pyjj-wubi"
+version = "0.1.0"
+description = "generate data for pyjj wubi"
+requires-python = ">=3.12"
+dependencies = [
+    "pyicu",
+    "opencc",
+]

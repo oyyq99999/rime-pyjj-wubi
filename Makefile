@@ -2,10 +2,9 @@ vpath %.txt data:generated:opencc:libs/OpenCC/data/dictionary
 vpath wubi86%.dict.yaml libs/rime-wubi:libs/rime-wubi86-ext
 vpath %.dict.yaml generated
 
-PYTHON := $(shell command -v python3 2>/dev/null)
-ifndef PYTHON
-	PYTHON := $(shell command -v python 2>/dev/null)
-endif
+VENV = .venv
+PYTHON = $(VENV)/bin/python
+UV = uv
 
 pinyin_txts := caspal_pinyin.txt caspal_phrase_pinyin.txt overwrite_pinyin.txt extend_phrase_pinyin.txt
 pinyin_dicts := caspal_pinyin_phrase.dict.yaml caspal_pinyin_unicode15.dict.yaml \
@@ -28,9 +27,12 @@ dicts = $(pinyin_dicts) $(wubi_dicts)
 emojis := emoji_category.txt emoji_word.txt
 emoji_sources := libs/rime-emoji/opencc/emoji_category.txt libs/rime-emoji/opencc/emoji_word.txt
 
-.PHONY : all clean
+.PHONY : $(VENV) all clean
 
-all : $(dicts) $(emojis)
+all : $(VENV) $(dicts) $(emojis)
+
+$(VENV):
+	$(UV) sync
 
 $(dicts) &: $(pinyin_txts) $(wubi_txts) $(opencc_txts) generate_dict.py
 	$(PYTHON) generate_dict.py

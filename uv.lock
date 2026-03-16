@@ -1,0 +1,35 @@
+version = 1
+revision = 3
+requires-python = ">=3.12"
+
+[[package]]
+name = "opencc"
+version = "1.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/fa/92/92f4519221b833801be1d037cde747f04c4e29e33bd7574b36b898d9e2bf/opencc-1.2.0.tar.gz", hash = "sha256:2bb913c7ed388466b26d38af4c8c4bb419ddb503235d070f0ee1b24998ef8bca", size = 3420630, upload-time = "2026-01-22T09:23:12.382Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f2/89/c3654977ae86211342356c5f455a26d93dd47222c2444e945aab6a4f91cc/opencc-1.2.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:c9851a7b7d50e4c5d52c71972cedbb618542a342ed57ce396be8988bfefdf040", size = 1376098, upload-time = "2026-01-22T09:23:04.052Z" },
+    { url = "https://files.pythonhosted.org/packages/f3/f8/fc8c5f25243a886dcf15329060e3596e4ab967ee2e277920e4feb6067211/opencc-1.2.0-cp312-cp312-manylinux2014_x86_64.whl", hash = "sha256:1f105a05fc76c29a1090cb613996aef26b60525e745e8471dc4485dfe17f2e08", size = 1655493, upload-time = "2026-01-22T09:23:05.387Z" },
+    { url = "https://files.pythonhosted.org/packages/d0/f6/0900195298326bd038469f3db571afd73b893a30fe92648f6418162a4cb8/opencc-1.2.0-cp312-cp312-win_amd64.whl", hash = "sha256:76cf42a9666ac5402478f7fad2f603d253096aa5c41199b173e08d49a9af8046", size = 1763621, upload-time = "2026-01-22T09:53:13.748Z" },
+]
+
+[[package]]
+name = "pyicu"
+version = "2.16.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/51/a9/b68d8fad5b830146c42f08b444c716ec50f576cbc8f01e26f4da6e89fc7a/pyicu-2.16.1.tar.gz", hash = "sha256:cafdc2bc6cfbb4b6e511dedeff37316f902af900993b576116b8243f4ad6478c", size = 268196, upload-time = "2026-02-05T23:44:41.002Z" }
+
+[[package]]
+name = "rime-pyjj-wubi"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "opencc" },
+    { name = "pyicu" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "opencc" },
+    { name = "pyicu" },
+]
