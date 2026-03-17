@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 
+import os
+
 from datetime import datetime
 
 from util import read_file
+
+UNICODE_VERSION=os.environ.get('UNICODE_VERSION', '17')
 
 now = datetime.now()
 version = now.strftime('%Y.%m.%d')
@@ -10,7 +14,7 @@ version = now.strftime('%Y.%m.%d')
 output_dir = 'generated'
 output_fn_format = '{}.dict.yaml'
 
-pinyin_id = 'caspal_pinyin_unicode15'
+pinyin_id = f'caspal_pinyin_unicode{UNICODE_VERSION}'
 pinyin_simp_id = f'{pinyin_id}_simp'
 pinyin_trad_id = f'{pinyin_id}_trad'
 pinyin_other_id = f'{pinyin_id}_other'

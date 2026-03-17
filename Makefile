@@ -5,11 +5,12 @@ vpath %.dict.yaml generated
 VENV = .venv
 PYTHON = $(VENV)/bin/python
 UV = uv
+export UNICODE_VERSION = 17
 
 pinyin_txts := caspal_pinyin.txt caspal_phrase_pinyin.txt overwrite_pinyin.txt extend_phrase_pinyin.txt
-pinyin_dicts := caspal_pinyin_phrase.dict.yaml caspal_pinyin_unicode15.dict.yaml \
-	caspal_pinyin_unicode15_simp.dict.yaml caspal_pinyin_unicode15_trad.dict.yaml \
-	caspal_pinyin_unicode15_other.dict.yaml
+pinyin_dicts := caspal_pinyin_phrase.dict.yaml caspal_pinyin_unicode$(UNICODE_VERSION).dict.yaml \
+	caspal_pinyin_unicode$(UNICODE_VERSION)_simp.dict.yaml caspal_pinyin_unicode$(UNICODE_VERSION)_trad.dict.yaml \
+	caspal_pinyin_unicode$(UNICODE_VERSION)_other.dict.yaml
 opencc_txts := STCharacters.txt TSCharacters.txt
 
 wubi_sources := wubi86.dict.yaml wubi86.basiccmpl.dict.yaml \

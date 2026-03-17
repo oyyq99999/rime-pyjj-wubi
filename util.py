@@ -1,6 +1,7 @@
 
 import re
 
+# Unicode 17.0.0 https://www.unicode.org/reports/tr38/tr38-39.html#BlockListing
 def get_code_points():
   code_points = {'all': set(), 'uni': set(), 'pua': set()}
   code_points['pua'].update(range(0xe000, 0xf8ff + 1))
@@ -9,29 +10,26 @@ def get_code_points():
 
   # CJK Unified Ideographs Extension A
   expected_size += 6582 + 10
-  code_points['uni'].update(range(0x3400, 0x4db5 + 1))
-  code_points['uni'].update(range(0x4db6, 0x4dbf + 1))
+  code_points['uni'].update(range(0x3400, 0x4dbf + 1))
   code_points['all'].update(range(0x3400, 0x4dbf + 1))
   assert len(code_points['all']) == expected_size
 
   # CJK Unified Ideographs
   expected_size += 20902 + 22 + 8 + 8 + 1 + 9 + 21 + 5 + 13 + 3
-  code_points['uni'].update(range(0x4e00, 0x9fa5 + 1))
-  code_points['uni'].update(range(0x9fa6, 0x9fff + 1))
+  code_points['uni'].update(range(0x4e00, 0x9fff + 1))
   code_points['all'].update(range(0x4e00, 0x9fff + 1))
   assert len(code_points['all']) == expected_size
 
   # CJK Unified Ideographs Extension B
   expected_size += 42711 + 7 + 2
-  code_points['uni'].update(range(0x20000, 0x2a6d6 + 1))
-  code_points['uni'].update(range(0x2a6d7, 0x2a6df + 1))
+  code_points['uni'].update(range(0x20000, 0x2a6df + 1))
   code_points['all'].update(range(0x20000, 0x2a6df + 1))
   assert len(code_points['all']) == expected_size
 
   # CJK Unified Ideographs Extension C
-  expected_size += 4149 + 4 + 1
-  code_points['uni'].update(range(0x2a700, 0x2b739 + 1))
-  code_points['all'].update(range(0x2a700, 0x2b739 + 1))
+  expected_size += 4149 + 4 + 1 + 6
+  code_points['uni'].update(range(0x2a700, 0x2b73f + 1))
+  code_points['all'].update(range(0x2a700, 0x2b73f + 1))
   assert len(code_points['all']) == expected_size
 
   # CJK Unified Ideographs Extension D
@@ -41,15 +39,21 @@ def get_code_points():
   assert len(code_points['all']) == expected_size
 
   # CJK Unified Ideographs Extension E
-  expected_size += 5762
-  code_points['uni'].update(range(0x2b820, 0x2cea1 + 1))
-  code_points['all'].update(range(0x2b820, 0x2cea1 + 1))
+  expected_size += 5762 + 12
+  code_points['uni'].update(range(0x2b820, 0x2cead + 1))
+  code_points['all'].update(range(0x2b820, 0x2cead + 1))
   assert len(code_points['all']) == expected_size
 
   # CJK Unified Ideographs Extension F
   expected_size += 7473
   code_points['uni'].update(range(0x2ceb0, 0x2ebe0 + 1))
   code_points['all'].update(range(0x2ceb0, 0x2ebe0 + 1))
+  assert len(code_points['all']) == expected_size
+
+  # CJK Unified Ideographs Extension I
+  expected_size += 622
+  code_points['uni'].update(range(0x2ebf0, 0x2ee5d + 1))
+  code_points['all'].update(range(0x2ebf0, 0x2ee5d + 1))
   assert len(code_points['all']) == expected_size
 
   # CJK Unified Ideographs Extension G
@@ -64,13 +68,19 @@ def get_code_points():
   code_points['all'].update(range(0x31350, 0x323af + 1))
   assert len(code_points['all']) == expected_size
 
+  # CJK Unified Ideographs Extension J
+  expected_size += 4298
+  code_points['uni'].update(range(0x323b0, 0x33479 + 1))
+  code_points['all'].update(range(0x323b0, 0x33479 + 1))
+  assert len(code_points['all']) == expected_size
+
   # CJK Compatibility Ideographs
   expected_size += 302 + 2 + 59 + 3 + 106
   code_points['all'].update(range(0xf900, 0xfa6d + 1))
   code_points['all'].update(range(0xfa70, 0xfad9 + 1))
   assert len(code_points['all']) == expected_size
 
-  # CJK Compatibility Supplement
+  # CJK Compatibility Ideographs Supplement
   expected_size += 542
   code_points['all'].update(range(0x2f800, 0x2fa1d + 1))
   assert len(code_points['all']) == expected_size
@@ -97,8 +107,8 @@ def get_code_points():
   assert len(code_points['all']) == expected_size
 
   # CJK Strokes
-  expected_size += 16 + 20
-  code_points['all'].update(range(0x31c0, 0x31e3 + 1))
+  expected_size += 16 + 20 + 2
+  code_points['all'].update(range(0x31c0, 0x31e5 + 1))
   assert len(code_points['all']) == expected_size
 
   # Enclosed CJK Letters and Months
