@@ -961,9 +961,9 @@ use_preset_vocabulary: false
 搂	lou
 搄	gen
 搅	jiao
-搜	shao
-搜	sou
-搜	xiao
+搜	shao	0%
+搜	sou	100%
+搜	xiao	0%
 携	xie
 摄	she
 摅	shu

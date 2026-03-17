@@ -1186,9 +1186,9 @@ use_preset_vocabulary: false
 損	sun
 搖	yao
 搗	dao
-搜	shao
-搜	sou
-搜	xiao
+搜	shao	0%
+搜	sou	100%
+搜	xiao	0%
 搵	wen
 搶	cheng
 搶	qiang
