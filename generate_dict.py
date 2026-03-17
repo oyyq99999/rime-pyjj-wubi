@@ -150,8 +150,9 @@ def wubi():
       lines = fph.readlines()
     f.write('\n')
     f.write('# 以下为词组\n')
-    for line in lines:
-      f.write('{}\n'.format(line.split('\t')[0]))
+    distinct_phrases = sorted({line.split('\t')[0] for line in lines})
+    for phrase in distinct_phrases:
+      f.write('{}\n'.format(phrase))
 
 def pinyin():
   pinyin_simp_map = {}
@@ -204,8 +205,9 @@ def pinyin():
   with open('{}/{}'.format(output_dir, output_fn_phrase), 'w') as f:
     f.write(header_pinyin_phrase)
     lines = read_file('{}/{}'.format(output_dir, 'caspal_phrase_pinyin.txt'))
-    for line in lines:
-      f.write(f'{line}\n')
+    distinct_phrases = sorted(set(lines))
+    for phrase in distinct_phrases:
+      f.write('{}\n'.format(phrase))
 
 
 def fuma():

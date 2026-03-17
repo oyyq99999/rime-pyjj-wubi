@@ -263,13 +263,12 @@ use_preset_vocabulary: false
 亂	luan
 了	le	98.90%
 了	liao	1.10%
-于	wei
-于	xu
-于	yu
+于	xu	0%
+于	yu	100%
 云	yun
-亘	gen
-亘	geng
-亘	xuan
+亘	gen	99.9%
+亘	huan	0.1%
+亘	xuan	0%
 亙	gen
 亙	geng
 亞	e
@@ -279,8 +278,8 @@ use_preset_vocabulary: false
 仇	qiu	16.16%
 价	jia	99.98%
 价	jie	0.02%
-仿	fang
-仿	pang
+仿	fang	99.5%
+仿	pang	0.5%
 伕	fu
 伙	huo
 佇	zhu
@@ -288,9 +287,9 @@ use_preset_vocabulary: false
 佔	chan
 佔	dian
 佔	zhan
-余	tu
-余	xu
-余	yu
+余	tu	0.01%
+余	xu	0.01%
+余	yu	99.98%
 佛	fo	97.74%
 佛	fu	2.26%
 佣	yong
@@ -301,9 +300,8 @@ use_preset_vocabulary: false
 侷	ju
 俁	yu
 係	xi
-俊	dun
-俊	jun
-俊	shun
+俊	jun	100%
+俊	shun	0%
 俓	jing
 俓	ying
 俔	qian
@@ -484,12 +482,11 @@ use_preset_vocabulary: false
 協	xie
 卜	bo	0%
 卜	bu	100%
-占	tie
-占	zhan
-卷	gun
-卷	juan
-卷	jun
-卷	quan
+占	tie	0%
+占	zhan	100%
+卷	gun	0%
+卷	juan	99.9%
+卷	quan	0.01%
 卹	su
 卹	xu
 卻	jiao
@@ -498,8 +495,8 @@ use_preset_vocabulary: false
 卽	ji
 厂	an	0.05%
 厂	chang	99.95%
-厘	chan
-厘	li
+厘	chan	0%
+厘	li	100%
 厙	she
 厠	ce
 厤	li
@@ -516,15 +513,15 @@ use_preset_vocabulary: false
 叄	can
 叢	cong
 只	zhi
-台	si
-台	tai
-台	yi
+台	si	0%
+台	tai	99.9%
+台	yi	0.01%
 叶	xie	0%
 叶	ye	100%
 吁	xu	95.45%
 吁	yu	4.55%
-吃	chi
-吃	qi
+吃	chi	99.99%
+吃	qi	0.01%
 合	ge	0.02%
 合	he	99.98%
 吊	diao
@@ -538,8 +535,8 @@ use_preset_vocabulary: false
 呂	lv
 周	zhou
 咨	zi
-咸	jian
-咸	xian
+咸	jian	0.5%
+咸	xian	99.5%
 咼	gua
 咼	guo
 咼	he
@@ -553,8 +550,7 @@ use_preset_vocabulary: false
 哯	xian
 唄	bai
 唄	bei
-唇	chun
-唇	zhen
+唇	chun	100%
 唓	che
 唸	dian
 唸	nian
@@ -775,8 +771,8 @@ use_preset_vocabulary: false
 奪	duo
 奬	jiang
 奮	fen
-奸	gan
-奸	jian
+奸	gan	0.1%
+奸	jian	99.9%
 奼	cha
 妝	zhuang
 姍	pan
@@ -842,9 +838,8 @@ use_preset_vocabulary: false
 孻	nai
 孾	ying
 孿	luan
-它	ta
-它	tuo
-它	yi
+它	ta	99.99%
+它	tuo	0.01%
 宮	gong
 家	jia	100%
 家	jie	0%
@@ -933,13 +928,12 @@ use_preset_vocabulary: false
 巖	yan
 巗	yan
 巘	yan
-巨	ju
-巨	qu
+巨	ju	100%
+巨	qu	0%
 巰	qiu
 巹	jin
 布	bu
-帘	chen
-帘	lian
+帘	lian	100%
 帥	shuai
 師	shi
 席	xi
@@ -960,10 +954,9 @@ use_preset_vocabulary: false
 幫	bang
 幬	chou
 幬	dao
-干	an
-干	gan
-幸	nie
-幸	xing
+干	an	0%
+干	gan	100%
+幸	xing	100%
 幹	gan
 幹	guan
 幹	han
@@ -972,9 +965,8 @@ use_preset_vocabulary: false
 广	an	0%
 广	guang	100%
 庫	ku
-庵	an
-庵	e
-庵	yan
+庵	an	100%
+庵	yan	0%
 廁	ce	100%
 廁	si	0%
 廂	xiang

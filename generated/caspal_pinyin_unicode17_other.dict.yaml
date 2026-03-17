@@ -9547,9 +9547,7 @@ use_preset_vocabulary: false
 奵	tian
 奶	nai
 奷	qian
-她	chi
-她	jie
-她	ta
+她	ta	100%
 奺	jiu
 奻	nuan
 好	hao
@@ -19171,8 +19169,8 @@ use_preset_vocabulary: false
 缷	xie
 缸	gang
 缹	fou
-缺	kui
-缺	que
+缺	kui	0%
+缺	que	100%
 缻	fou
 缼	qi
 缾	ping
@@ -22746,8 +22744,7 @@ use_preset_vocabulary: false
 踧	cu
 踧	di
 踨	zong
-踩	cai
-踩	kui
+踩	cai	100%
 踫	pan
 踫	peng
 踭	zheng

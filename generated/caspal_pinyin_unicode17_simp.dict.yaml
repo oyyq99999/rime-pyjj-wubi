@@ -143,8 +143,8 @@ use_preset_vocabulary: false
 两	liang
 严	yan
 丧	sang
-个	gan
-个	ge
+个	gan	0%
+个	ge	100%
 丰	feng
 临	lin
 为	wei
@@ -168,15 +168,13 @@ use_preset_vocabulary: false
 了	le	98.90%
 了	liao	1.10%
 争	zheng
-于	wei
-于	xu
-于	yu
-亏	kui
-亏	yu
+于	xu	0%
+于	yu	100%
+亏	kui	100%
 云	yun
-亘	gen
-亘	geng
-亘	xuan
+亘	gen	99.9%
+亘	huan	0.1%
+亘	xuan	0%
 亚	ya
 产	chan
 亩	mu
@@ -185,9 +183,7 @@ use_preset_vocabulary: false
 亵	xie
 亸	duo
 亿	yi
-仅	fu
-仅	jin
-仅	nu
+仅	jin	100%
 仆	pu
 仇	chou	83.84%
 仇	qiu	16.16%
@@ -199,10 +195,9 @@ use_preset_vocabulary: false
 们	men
 价	jia	99.98%
 价	jie	0.02%
-仿	fang
-仿	pang
-众	yin
-众	zhong
+仿	fang	99.5%
+仿	pang	0.5%
+众	zhong	100%
 优	you
 伙	huo
 会	hui	99.98%
@@ -221,12 +216,11 @@ use_preset_vocabulary: false
 伧	chen	0%
 伪	wei
 伫	zhu
-体	ben
-体	cui
-体	ti
-余	tu
-余	xu
-余	yu
+体	ben	0%
+体	ti	100%
+余	tu	0.01%
+余	xu	0.01%
+余	yu	99.98%
 佛	fo	97.74%
 佛	fu	2.26%
 佣	yong
@@ -243,9 +237,8 @@ use_preset_vocabulary: false
 侪	chai
 侬	nong
 侭	jin
-俊	dun
-俊	jun
-俊	shun
+俊	jun	100%
+俊	shun	0%
 俣	yu
 俦	chou
 俨	yan
@@ -272,9 +265,8 @@ use_preset_vocabulary: false
 僵	jiang
 儿	er
 克	ke
-兑	dui
-兑	duo
-兑	rui
+兑	dui	100%
+兑	rui	0%
 兖	yan
 党	dang
 兰	lan
@@ -285,12 +277,11 @@ use_preset_vocabulary: false
 养	yang
 兽	shou
 冁	chan
-内	na
-内	nei
-内	rui
+内	na	0%
+内	nei	100%
+内	rui	0%
 冈	gang
-册	ce
-册	zha
+册	ce	100%
 写	xie
 军	jun
 农	nong
@@ -302,8 +293,7 @@ use_preset_vocabulary: false
 决	jue
 况	kuang
 冻	dong
-净	cheng
-净	jing
+净	jing	100%
 凄	qi
 准	zhun
 凉	liang
@@ -359,8 +349,7 @@ use_preset_vocabulary: false
 势	shi
 勋	xun
 勚	yi
-匀	jun
-匀	yun
+匀	yun	100%
 匦	gui
 匮	gui	1%
 匮	kui	99%
@@ -377,19 +366,17 @@ use_preset_vocabulary: false
 卖	mai
 卜	bo	0%
 卜	bu	100%
-占	tie
-占	zhan
+占	tie	0%
+占	zhan	100%
 卢	lu
-卤	lu
-卤	xi
+卤	lu	100%
 卧	wo
 卫	wei
 即	ji
 却	que
-卷	gun
-卷	juan
-卷	jun
-卷	quan
+卷	gun	0%
+卷	juan	99.9%
+卷	quan	0.01%
 卺	jin
 厂	an	0.05%
 厂	chang	99.95%
@@ -401,8 +388,8 @@ use_preset_vocabulary: false
 厍	she
 厐	pang
 厕	ce
-厘	chan
-厘	li
+厘	chan	0%
+厘	li	100%
 厢	xiang
 厣	yan
 厦	sha	99.78%
@@ -424,22 +411,18 @@ use_preset_vocabulary: false
 叙	xu
 叠	die
 只	zhi
-台	si
-台	tai
-台	yi
+台	si	0%
+台	tai	99.9%
+台	yi	0.01%
 叶	xie	0%
 叶	ye	100%
-号	hao
-号	xiao
-叹	tan
-叹	yi
-叹	you
-叽	ji
-叽	jiao
+号	hao	100%
+叹	tan	100%
+叽	ji	100%
 吁	xu	95.45%
 吁	yu	4.55%
-吃	chi
-吃	qi
+吃	chi	99.99%
+吃	qi	0.01%
 合	ge	0.02%
 合	he	99.98%
 吊	diao
@@ -450,14 +433,11 @@ use_preset_vocabulary: false
 吓	xia	99.78%
 吕	lv
 吗	ma
-吨	dun
-吨	tun
-听	ting
-听	yi
-听	yin
+吨	dun	100%
+听	ting	99.99%
+听	yin	0.01%
 启	qi
-吴	tun
-吴	wu
+吴	wu	100%
 呆	ai	0.02%
 呆	dai	99.98%
 呐	na	99.82%
@@ -481,8 +461,8 @@ use_preset_vocabulary: false
 咝	si
 咤	zha
 咨	zi
-咸	jian
-咸	xian
+咸	jian	0.5%
+咸	xian	99.5%
 咽	yan	88.56%
 咽	ye	11.44%
 哄	hong
@@ -498,8 +478,7 @@ use_preset_vocabulary: false
 哜	ji
 哝	nong
 哟	yo
-唇	chun
-唇	zhen
+唇	chun	100%
 唛	ma
 唛	mai
 唝	gong
@@ -533,28 +512,25 @@ use_preset_vocabulary: false
 嚣	ao
 嚣	xiao
 回	hui
-团	qiu
-团	tuan
-园	wan
-园	yuan
+团	tuan	100%
+园	wan	0.01%
+园	yuan	99.99%
 困	kun
-囱	chuang
-囱	cong
+囱	chuang	0%
+囱	cong	100%
 围	wei
 囵	lun
 国	guo
 图	tu
 圆	yuan
-圣	ku
-圣	sheng
+圣	sheng	100%
 圹	kuang
 场	chang
 坂	ban
 坏	huai	100%
 坏	pei	0%
 坏	pi	0%
-块	kuai
-块	yue
+块	kuai	100%
 坚	jian
 坛	tan
 坜	li
@@ -566,10 +542,9 @@ use_preset_vocabulary: false
 垅	long
 垆	lu
 垒	lei
-垦	ken
-垦	yin
-垩	e
-垩	sheng
+垦	ken	100%
+垩	e	100%
+垩	sheng	0%
 垫	dian
 垭	ya
 垯	da
@@ -586,8 +561,7 @@ use_preset_vocabulary: false
 塆	wan
 墙	qiang
 壮	zhuang
-声	qing
-声	sheng
+声	sheng	100%
 壳	ke	97.56%
 壳	qiao	2.44%
 壶	hu
@@ -605,14 +579,12 @@ use_preset_vocabulary: false
 夺	duo
 奁	lian
 奂	huan
-奋	fen
-奋	kang
+奋	fen	100%
 奖	jiang
-奥	ao
-奥	you
-奥	yu
-奸	gan
-奸	jian
+奥	ao	99.9%
+奥	yu	0.1%
+奸	gan	0.1%
+奸	jian	99.9%
 妆	zhuang
 妇	fu
 妈	ma
@@ -647,17 +619,15 @@ use_preset_vocabulary: false
 孙	sun
 学	xue
 孪	luan
-宁	ning
-宁	zhu
-它	ta
-它	tuo
-它	yi
+宁	ning	100%
+宁	zhu	0%
+它	ta	99.99%
+它	tuo	0.01%
 宝	bao
 实	shi
 宠	chong
 审	shen
-宪	xian
-宪	xiong
+宪	xian	100%
 宫	gong
 家	jia	100%
 家	jie	0%
@@ -717,19 +687,17 @@ use_preset_vocabulary: false
 嵚	qin
 嵝	lou
 巅	dian
-巨	ju
-巨	qu
+巨	ju	100%
+巨	qu	0%
 巩	gong
 巯	qiu
-币	bi
-币	yin
+币	bi	100%
 布	bu
 帅	shuai
 师	shi
 帏	wei
 帐	zhang
-帘	chen
-帘	lian
+帘	lian	100%
 帜	zhi
 带	dai
 帧	zhen
@@ -741,15 +709,13 @@ use_preset_vocabulary: false
 帻	ze
 帼	guo
 幂	mi
-干	an
-干	gan
+干	an	0%
+干	gan	100%
 并	bing
-幸	nie
-幸	xing
+幸	xing	100%
 广	an	0%
 广	guang	100%
-庄	peng
-庄	zhuang
+庄	zhuang	100%
 庆	qing
 床	chuang
 庐	lu
@@ -759,9 +725,8 @@ use_preset_vocabulary: false
 庙	miao
 庞	pang
 废	fei
-庵	an
-庵	e
-庵	yan
+庵	an	100%
+庵	yan	0%
 庼	qing
 廪	lin
 开	kai
