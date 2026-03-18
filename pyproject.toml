@@ -2,6 +2,7 @@
 name = "rime-pyjj-wubi"
 version = "0.1.0"
 description = "generate data for pyjj wubi"
+license = "GPL-3.0-only"
 requires-python = ">=3.12"
 dependencies = [
     "pyicu",
