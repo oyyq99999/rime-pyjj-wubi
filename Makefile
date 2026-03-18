@@ -7,11 +7,15 @@ PYTHON = $(VENV)/bin/python
 UV = uv
 export UNICODE_VERSION = 17
 
-pinyin_txts := caspal_pinyin.txt caspal_phrase_pinyin.txt overwrite_pinyin.txt extend_phrase_pinyin.txt
+pinyin_txts := caspal_pinyin_freq.txt caspal_phrase_pinyin.txt
 pinyin_dicts := caspal_pinyin_phrase.dict.yaml caspal_pinyin_unicode$(UNICODE_VERSION).dict.yaml \
 	caspal_pinyin_unicode$(UNICODE_VERSION)_simp.dict.yaml caspal_pinyin_unicode$(UNICODE_VERSION)_trad.dict.yaml \
 	caspal_pinyin_unicode$(UNICODE_VERSION)_other.dict.yaml
 opencc_txts := STCharacters.txt TSCharacters.txt
+
+phrase_pinyin_sources := libs/phrase-pinyin-data/large_pinyin.txt extend_phrase_pinyin.txt
+pinyin_freq_sources := libs/jieba/extra_dict/dict.txt.big $(phrase_pinyin_sources) libs/pinyin-data/pinyin.txt overwrite_pinyin.txt
+
 
 wubi_sources := wubi86.dict.yaml wubi86.basiccmpl.dict.yaml \
 	wubi86.extacmpl.dict.yaml wubi86.extbcmpl.dict.yaml \
@@ -38,10 +42,10 @@ $(VENV):
 $(dicts) &: $(pinyin_txts) $(wubi_txts) $(opencc_txts) generate_dict.py
 	$(PYTHON) generate_dict.py
 
-caspal_pinyin.txt : libs/pinyin-data/pinyin.txt overwrite_pinyin.txt parse_pinyin_data.py
-	$(PYTHON) parse_pinyin_data.py
+caspal_pinyin_freq.txt : $(pinyin_freq_sources) parse_pinyin_and_freq.py
+	$(PYTHON) parse_pinyin_and_freq.py
 
-caspal_phrase_pinyin.txt : libs/phrase-pinyin-data/pinyin.txt extend_phrase_pinyin.txt parse_phrase_pinyin_data.py
+caspal_phrase_pinyin.txt : $(phrase_pinyin_sources) parse_phrase_pinyin_data.py
 	$(PYTHON) parse_phrase_pinyin_data.py
 
 $(wubi_txts) &: $(wubi_sources) combine_wubi.py

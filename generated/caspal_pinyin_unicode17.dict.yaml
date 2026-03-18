@@ -2,7 +2,7 @@
 
 ---
 name: caspal_pinyin_unicode17
-version: "2026.03.17"
+version: "2026.03.18"
 sort: by_weight
 vocabulary: essay-zh-hans
 import_tables:

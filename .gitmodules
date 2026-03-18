@@ -16,3 +16,6 @@
 [submodule "libs/rime-emoji"]
 	path = libs/rime-emoji
 	url = https://github.com/rime/rime-emoji.git
+[submodule "libs/jieba"]
+	path = libs/jieba
+	url = https://github.com/fxsjy/jieba.git
