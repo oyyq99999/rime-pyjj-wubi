@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from util import read_file, untone, remove_duplicates
 
 output_dir = 'generated'

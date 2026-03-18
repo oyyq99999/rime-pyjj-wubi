@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-
 import os
-
 from datetime import datetime
 
 from util import read_file
@@ -12,7 +9,7 @@ now = datetime.now()
 version = now.strftime('%Y.%m.%d')
 
 output_dir = 'generated'
-output_fn_format = '{}.dict.yaml'
+output_dict_fn_format = '{}.dict.yaml'
 
 pinyin_id = f'caspal_pinyin_unicode{UNICODE_VERSION}'
 pinyin_simp_id = f'{pinyin_id}_simp'
@@ -24,15 +21,15 @@ phrase_id = 'caspal_pinyin_phrase'
 fuma_id = 'caspal_wubi_fuma'
 wubi_id = 'caspal_wubi86'
 
-output_fn_pinyin = output_fn_format.format(pinyin_id)
-output_fn_pinyin_simp = output_fn_format.format(pinyin_simp_id)
-output_fn_pinyin_trad = output_fn_format.format(pinyin_trad_id)
-output_fn_pinyin_other = output_fn_format.format(pinyin_other_id)
+output_fn_pinyin = output_dict_fn_format.format(pinyin_id)
+output_fn_pinyin_simp = output_dict_fn_format.format(pinyin_simp_id)
+output_fn_pinyin_trad = output_dict_fn_format.format(pinyin_trad_id)
+output_fn_pinyin_other = output_dict_fn_format.format(pinyin_other_id)
 
-output_fn_phrase = output_fn_format.format(phrase_id)
+output_fn_phrase = output_dict_fn_format.format(phrase_id)
 
-output_fn_fuma = output_fn_format.format(fuma_id)
-output_fn_wubi = output_fn_format.format(wubi_id)
+output_fn_fuma_dict = output_dict_fn_format.format(fuma_id)
+output_fn_wubi_dict = output_dict_fn_format.format(wubi_id)
 
 header_template = '''# author: Caspal
 
@@ -121,10 +118,19 @@ def get_variant_tables():
         simp_set.add(c)
     for c in {'𰻞', '韡'}:
         trad_set.add(c)
-    return (simp_set, trad_set)
+    return simp_set, trad_set
 
 
-def wubi():
+def output_dict_file(data_map: dict[str, str], output_fn: str, header: str):
+    keys = sorted(data_map.keys())
+    with open('{}/{}'.format(output_dir, output_fn), 'w') as f:
+        f.write(header)
+        for key in keys:
+            for content in sorted(data_map[key]):
+                f.write('{}\t{}\n'.format(key, content))
+
+
+def generate_wubi_dict():
     wubi86_map = {}
     lines = read_file('{}/{}'.format(output_dir, 'caspal_wubi86.txt'))
     for line in lines:
@@ -132,7 +138,7 @@ def wubi():
         wubi86_map.setdefault(ch, set()).add(wubi)
 
     keys = sorted(wubi86_map.keys())
-    with open('{}/{}'.format(output_dir, output_fn_wubi), 'w') as f:
+    with open('{}/{}'.format(output_dir, output_fn_wubi_dict), 'w') as f:
         f.write(header_wubi)
         for key in keys:
             for wubi in sorted(wubi86_map[key]):
@@ -169,26 +175,9 @@ def pinyin():
     with open('{}/{}'.format(output_dir, output_fn_pinyin), 'w') as f:
         f.write(header_pinyin)
 
-    keys = sorted(pinyin_simp_map.keys())
-    with open('{}/{}'.format(output_dir, output_fn_pinyin_simp), 'w') as f:
-        f.write(header_pinyin_simp)
-        for key in keys:
-            for pinyin_freq in sorted(pinyin_simp_map[key]):
-                f.write('{}\t{}\n'.format(key, pinyin_freq))
-
-    keys = sorted(pinyin_trad_map.keys())
-    with open('{}/{}'.format(output_dir, output_fn_pinyin_trad), 'w') as f:
-        f.write(header_pinyin_trad)
-        for key in keys:
-            for pinyin_freq in sorted(pinyin_trad_map[key]):
-                f.write('{}\t{}\n'.format(key, pinyin_freq))
-
-    keys = sorted(pinyin_other_map.keys())
-    with open('{}/{}'.format(output_dir, output_fn_pinyin_other), 'w') as f:
-        f.write(header_pinyin_other)
-        for key in keys:
-            for pinyin_freq in sorted(pinyin_other_map[key]):
-                f.write('{}\t{}\n'.format(key, pinyin_freq))
+    output_dict_file(pinyin_simp_map, output_fn_pinyin_simp, header_pinyin_simp)
+    output_dict_file(pinyin_trad_map, output_fn_pinyin_trad, header_pinyin_trad)
+    output_dict_file(pinyin_other_map, output_fn_pinyin_other, header_pinyin_other)
 
     with open('{}/{}'.format(output_dir, output_fn_phrase), 'w') as f:
         f.write(header_pinyin_phrase)
@@ -198,7 +187,7 @@ def pinyin():
             f.write('{}\n'.format(phrase))
 
 
-def fuma():
+def generate_fuma_dict():
     fuma_map = {}
 
     lines = read_file('{}/{}'.format(output_dir, 'caspal_wubi86_fuma.txt'))
@@ -214,18 +203,13 @@ def fuma():
                     codes.remove(a)
         fuma_map[ch] = codes
 
-    keys = sorted(fuma_map.keys())
-    with open('{}/{}'.format(output_dir, output_fn_fuma), 'w') as f:
-        f.write(header_fuma)
-        for key in keys:
-            for fuma in sorted(fuma_map[key]):
-                f.write('{}\t{}\n'.format(key, fuma))
+    output_dict_file(fuma_map, output_fn_fuma_dict, header_fuma)
 
 
 def main():
     pinyin()
-    fuma()
-    wubi()
+    generate_fuma_dict()
+    generate_wubi_dict()
 
 
 if __name__ == '__main__':
