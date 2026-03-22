@@ -55,7 +55,7 @@ vocabulary: essay-zh-hans
 import_tables:
   - {simp_id}
   - {other_id}
-  # - {trad_id}
+  - {trad_id}
   - {phrase_id}
 ...
 

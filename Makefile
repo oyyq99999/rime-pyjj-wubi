@@ -20,9 +20,9 @@ pinyin_freq_sources := libs/jieba/extra_dict/dict.txt.big $(phrase_pinyin_source
 wubi_sources := wubi86.dict.yaml wubi86.basiccmpl.dict.yaml \
 	wubi86.extacmpl.dict.yaml wubi86.extbcmpl.dict.yaml \
 	wubi86.extc.dict.yaml wubi86.extccmpl.dict.yaml \
-	wubi86.extd.dict.yaml wubi86.exte.dict.yaml \
+	wubi86.extd.dict.yaml wubi86.exte.dict.yaml wubi86.extecmpl.dict.yaml \
 	wubi86.extf.dict.yaml wubi86.extg.dict.yaml \
-	wubi86.exth.dict.yaml
+	wubi86.exth.dict.yaml wubi86.exti.dict.yaml wubi86.extj.dict.yaml
 
 wubi_txts := caspal_wubi86.txt caspal_wubi86_fuma.txt
 wubi_dicts := caspal_wubi86.dict.yaml caspal_wubi_fuma.dict.yaml

@@ -3,7 +3,7 @@
 	url = https://github.com/mozillazg/pinyin-data.git
 [submodule "rime-wubi86-ext"]
 	path = libs/rime-wubi86-ext
-	url = https://github.com/LS-Hower/rime-wubi86-ext.git
+	url = git@github.com:oyyq99999/rime-wubi86-ext.git
 [submodule "rime-wubi"]
 	path = libs/rime-wubi
 	url = https://github.com/rime/rime-wubi.git

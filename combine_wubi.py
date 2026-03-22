@@ -30,9 +30,12 @@ def main():
         'libs/rime-wubi86-ext/wubi86.extccmpl.dict.yaml',
         'libs/rime-wubi86-ext/wubi86.extd.dict.yaml',
         'libs/rime-wubi86-ext/wubi86.exte.dict.yaml',
+        'libs/rime-wubi86-ext/wubi86.extecmpl.dict.yaml',
         'libs/rime-wubi86-ext/wubi86.extf.dict.yaml',
         'libs/rime-wubi86-ext/wubi86.extg.dict.yaml',
         'libs/rime-wubi86-ext/wubi86.exth.dict.yaml',
+        'libs/rime-wubi86-ext/wubi86.exti.dict.yaml',
+        'libs/rime-wubi86-ext/wubi86.extj.dict.yaml',
     ]
     code_points = get_code_points()
     for fn in files:
