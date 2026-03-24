@@ -151,16 +151,18 @@ def generate_wubi_dict():
             f.write('{}\n'.format(phrase))
 
 
-def pinyin():
+def pinyin() -> set[str]:
     pinyin_simp_map = {}
     pinyin_trad_map = {}
     pinyin_other_map = {}
+    pinyin_chars = set()
 
     simp_set, trad_set = get_variant_tables()
 
     lines = read_file('{}/{}'.format(output_dir, 'caspal_pinyin_freq.txt'))
     for line in lines:
         ch, pinyin_freq = line.split('\t', 1)
+        pinyin_chars.add(ch)
         included = False
         if ch in simp_set:
             pinyin_simp_map.setdefault(ch, set()).add(pinyin_freq)
@@ -184,15 +186,17 @@ def pinyin():
         distinct_phrases = sorted(set(lines))
         for phrase in distinct_phrases:
             f.write('{}\n'.format(phrase))
+    return pinyin_chars
 
 
-def generate_fuma_dict():
+def generate_fuma_dict(pinyin_chars: set[str] | None = None):
     fuma_map = {}
 
     lines = read_file('{}/{}'.format(output_dir, 'caspal_wubi86_fuma.txt'))
     for line in lines:
         ch, fuma = line.split('\t')
-        fuma_map.setdefault(ch, set()).add(fuma)
+        if pinyin_chars is None or ch in pinyin_chars:
+            fuma_map.setdefault(ch, set()).add(fuma)
 
     for ch in fuma_map:
         codes = fuma_map[ch].copy()
@@ -206,8 +210,8 @@ def generate_fuma_dict():
 
 
 def main():
-    pinyin()
-    generate_fuma_dict()
+    pinyin_chars = pinyin()
+    generate_fuma_dict(pinyin_chars)
     generate_wubi_dict()
 
 
